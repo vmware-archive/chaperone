@@ -21,5 +21,7 @@
   </project>
 
   <!-- roles -->
+  <project path="roles/ansible" name="private/thite/ansible-role-ansible" groups="roles" remote="vmware"/>
+  <project path="roles/repo" name="private/thite/ansible-role-repo" groups="roles" remote="vmware"/>
 
 </manifest>
