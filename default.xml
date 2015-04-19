@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="https://github.com" />
+
+  <remote  name="vmware"
+           fetch="ssh://git.eng.vmware.com" />
+
+  <default revision="refs/heads/master"
+           remote="github"
+           sync-c="true"
+           sync-j="8" />
+
+  <!-- modules -->
+  <project path="modules/xml" name="private/thite/ansible-xml.git" groups="modules" remote="vmware">
+    <copyfile src="library/xml" dest="library/xml" />
+  </project>
+  <project path="modules/vsphere" name="ViaSat/ansible-vsphere" groups="modules" remote="github">
+    <copyfile src="vsphere" dest="library/vsphere" />
+  </project>
+
+  <!-- roles -->
+
+</manifest>
