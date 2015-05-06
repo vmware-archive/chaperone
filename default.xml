@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <!-- Github remote -->
   <remote  name="github"
            fetch="https://github.com" />
 
+  <!-- VMware general remote -->
   <remote  name="vmware"
            fetch="ssh://git.eng.vmware.com" />
 
-  <default revision="refs/heads/master"
-           remote="github"
-           sync-c="true"
-           sync-j="8" />
+  <!-- NSBU Gitlab remote -->
+  <remote  name="vmos"
+           fetch="ssh://nsxgitlab.nicira.eng.vmware.com" />
 
+  <!-- Defaults for repo -->
+  <default remote="vmware"
+           sync-c="true"
+           sync-j="4"
+           revision="master" />
+
+  <!-- SuperVIO -->
   <!-- modules -->
   <project path="modules/xml" name="private/thite/ansible-xml.git" groups="modules" remote="vmware">
     <copyfile src="library/xml" dest="library/xml" />
@@ -23,5 +31,26 @@
   <!-- roles -->
   <project path="roles/ansible" name="private/thite/ansible-role-ansible" groups="roles" remote="vmware"/>
   <project path="roles/repo" name="private/thite/ansible-role-repo" groups="roles" remote="vmware"/>
+  <project path="ansible/roles/apache" name="geerlingguy/ansible-role-apache" groups="supervio" remote="github"/>
+
+  <!-- from VMOS -->
+  <project path="ui/the-ui2" name="public-access/the-ui2" groups="vmos,supervio" remote="vmos"/>
+
+  <!-- VMOS -->
+  <project path="vmos/brussell/cinder-havana" name="brussell/cinder-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/brussell/thermosite" name="brussell/thermosite.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/cinder-havana" name="nsbu-openstack/cinder-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/glance-havana" name="nsbu-openstack/glance-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/heat-havana" name="nsbu-openstack/heat-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/horizon-havana" name="nsbu-openstack/horizon-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/keystone-havana" name="nsbu-openstack/keystone-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/neutron-havana" name="nsbu-openstack/neutron-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/nova-havana" name="nsbu-openstack/nova-havana.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/python-keystoneclient" name="nsbu-openstack/python-keystoneclient.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/vmos" name="nsbu-openstack/vmos.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/vmos-prep" name="nsbu-openstack/vmos-prep.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/vmosautoconfig" name="nsbu-openstack/vmosautoconfig.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/nsbu-openstack/vmosautoprep" name="nsbu-openstack/vmosautoprep.git" groups="vmos" remote="vmos"/>
+  <project path="vmos/transforms/installer" name="transformers/installer.git" groups="vmos" remote="vmos"/>
 
 </manifest>
