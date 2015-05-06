@@ -21,20 +21,25 @@
 
   <!-- SuperVIO -->
   <!-- modules -->
-  <project path="modules/xml" name="private/thite/ansible-xml.git" groups="modules" remote="vmware">
-    <copyfile src="library/xml" dest="library/xml" />
+  <project path="ansible/modules/xml" name="private/thite/ansible-xml.git" groups="modules,supervio" remote="vmware">
+    <copyfile src="library/xml" dest="ansible/library/xml" />
   </project>
-  <project path="modules/vsphere" name="ViaSat/ansible-vsphere" groups="modules" remote="github">
-    <copyfile src="vsphere" dest="library/vsphere" />
+  <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,supervio" remote="github">
+    <copyfile src="vsphere" dest="ansible/library/vsphere" />
   </project>
 
-  <!-- roles -->
-  <project path="roles/ansible" name="private/thite/ansible-role-ansible" groups="roles" remote="vmware"/>
-  <project path="roles/repo" name="private/thite/ansible-role-repo" groups="roles" remote="vmware"/>
-  <project path="ansible/roles/apache" name="geerlingguy/ansible-role-apache" groups="supervio" remote="github"/>
+  <!-- roles from vmware -->
+  <project path="ansible/roles/ansible" name="private/thite/ansible-role-ansible.git" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/repo" name="private/thite/ansible-role-repo.git" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/sshkeys" name="private/thite/ansible-role-sshkeys.git" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/sudo" name="private/thite/ansible-role-sudo.git" groups="roles,supervio" remote="vmware"/>
+
+  <!-- roles from github -->
+  <project path="ansible/roles/apache" name="geerlingguy/ansible-role-apache.git" groups="roles,supervio" remote="github"/>
+  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="roles,supervio" remote="github"/>
 
   <!-- from VMOS -->
-  <project path="ui/the-ui2" name="public-access/the-ui2" groups="vmos,supervio" remote="vmos"/>
+  <project path="ui/the-ui2" name="public-access/the-ui2.git" groups="vmos,supervio" remote="vmos"/>
 
   <!-- VMOS -->
   <project path="vmos/brussell/cinder-havana" name="brussell/cinder-havana.git" groups="vmos" remote="vmos"/>
