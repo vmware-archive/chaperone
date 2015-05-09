@@ -35,12 +35,15 @@
   <project path="ansible/roles/sudo" name="private/thite/ansible-role-sudo.git" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/supervio" name="private/thite/ansible-role-supervio.git" groups="roles,supervio" remote="vmware"/>
 
+  <!-- playbooks -->
+  <project path="ansible/playbooks" name="private/thite/ansible-playbooks-supervio" groups="playbooks,supervio" remote="vmware"/>
+
   <!-- roles from github -->
   <project path="ansible/roles/apache" name="geerlingguy/ansible-role-apache.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="roles,supervio" remote="github"/>
 
-  <!-- from VMOS -->
-  <project path="ui/the-ui2" name="public-access/the-ui2.git" groups="vmos,supervio" remote="vmos"/>
+  <!-- user interface (django) -->
+  <project path="ui" name="private/thite/supervio-ui" groups="supervio" remote="vmware"/>
 
   <!-- VMOS -->
   <project path="vmos/brussell/cinder-havana" name="brussell/cinder-havana.git" groups="vmos" remote="vmos"/>
