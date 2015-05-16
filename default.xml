@@ -19,9 +19,16 @@
            sync-j="4"
            revision="master" />
 
+  <!-- playbooks -->
+  <project path="ansible/playbooks" name="private/thite/ansible-playbooks-supervio.git" groups="gerrit,playbooks,supervio" remote="vmware"/>
+
+  <!-- gerrit -->
+  <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="gerrit" remote="github" />
+  <!-- project path="ansible/roles/gerrit" name="private/thite/ansible-role-gerrit.git" groups="gerrit" remote="vmware"/ -->
+
   <!-- SuperVIO -->
   <!-- modules -->
-  <project path="ansible/modules/xml" name="private/thite/ansible-xml.git" groups="modules,supervio" remote="vmware">
+  <project path="ansible/modules/xml" name="private/thite/ansible-xml.git" groups="modules,supervio" remote="vmware" >
     <copyfile src="library/xml" dest="ansible/library/xml" />
   </project>
   <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,supervio" remote="github">
@@ -32,16 +39,13 @@
   <project path="ansible/roles/ansible" name="private/thite/ansible-role-ansible.git" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/pip" name="private/thite/ansible-role-pip.git" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/repo" name="private/thite/ansible-role-repo.git" groups="roles,supervio" remote="vmware"/>
-  <project path="ansible/roles/sshkeys" name="private/thite/ansible-role-sshkeys.git" groups="roles,supervio" remote="vmware"/>
-  <project path="ansible/roles/sudo" name="private/thite/ansible-role-sudo.git" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/sshkeys" name="private/thite/ansible-role-sshkeys.git" groups="gerrit,roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/sudo" name="private/thite/ansible-role-sudo.git" groups="gerrit,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/supervio" name="private/thite/ansible-role-supervio.git" groups="roles,supervio" remote="vmware"/>
-
-  <!-- playbooks -->
-  <project path="ansible/playbooks" name="private/thite/ansible-playbooks-supervio.git" groups="playbooks,supervio" remote="vmware"/>
 
   <!-- roles from github -->
   <project path="ansible/roles/apache" name="geerlingguy/ansible-role-apache.git" groups="roles,supervio" remote="github"/>
-  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="roles,supervio" remote="github"/>
+  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="gerrit,roles,supervio" remote="github"/>
 
   <!-- user interface (django) -->
   <project path="ui" name="private/thite/supervio-ui" groups="supervio" remote="vmware"/>
