@@ -24,7 +24,8 @@
 
   <!-- gerrit -->
   <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="gerrit" remote="github" />
-  <!-- project path="ansible/roles/gerrit" name="private/thite/ansible-role-gerrit.git" groups="gerrit" remote="vmware"/ -->
+  <project path="ansible/roles/openldap" name="private/thite/ansible-role-openldap" groups="gerrit" remote="vmware" />
+  <project path="ansible/roles/gerrit" name="private/thite/ansible-role-gerrit.git" groups="gerrit" remote="vmware" />
 
   <!-- SuperVIO -->
   <!-- modules -->
