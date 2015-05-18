@@ -1,0 +1,5 @@
+[gerrit]
+host=gerrit.cloudbuilders.vmware.local
+port=29418
+project=supervio
+defaultbranch=master
