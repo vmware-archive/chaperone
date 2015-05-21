@@ -30,6 +30,9 @@
 
   <!-- SuperVIO -->
   <!-- modules -->
+  <project path="ansible/modules/supervio" name="ansible-module-supervio" groups="modules,supervio" remote="vmware">
+    <copyfile src="dc_cluster.py" dest="ansible/library/dc_cluster.py" />
+  </project>
   <project path="ansible/modules/xml" name="ansible-xml" groups="modules,supervio" remote="vmware" >
     <copyfile src="library/xml" dest="ansible/library/xml" />
   </project>
@@ -39,11 +42,16 @@
 
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/audodeploy" name="ansible-role-autodeploy" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/pip" name="ansible-role-pip" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/repo" name="ansible-role-repo" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/sshkeys" name="ansible-role-sshkeys" groups="gerrit,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/sudo" name="ansible-role-sudo" groups="gerrit,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/supervio" name="ansible-role-supervio" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/vcenter" name="ansible-role-vcenter" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/vio" name="ansible-role-vio" groups="roles,supervio" remote="vmware"/>
 
   <!-- roles from github -->
   <project path="ansible/roles/apache" name="geerlingguy/ansible-role-apache.git" groups="roles,supervio" remote="github"/>
