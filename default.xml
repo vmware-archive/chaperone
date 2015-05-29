@@ -32,6 +32,9 @@
   <!-- modules -->
   <project path="ansible/modules/supervio" name="ansible-module-supervio" groups="modules,supervio" remote="vmware">
     <copyfile src="dc_cluster.py" dest="ansible/library/dc_cluster.py" />
+    <copyfile src="dvs.py" dest="ansible/library/dvs.py" />
+    <copyfile src="getids.py" dest="ansible/library/getids.py" />
+    <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
   </project>
   <project path="ansible/modules/xml" name="ansible-xml" groups="modules,supervio" remote="vmware" >
     <copyfile src="library/xml" dest="ansible/library/xml" />
