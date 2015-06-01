@@ -45,7 +45,7 @@
 
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="roles,supervio" remote="vmware"/>
-  <project path="ansible/roles/audodeploy" name="ansible-role-autodeploy" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/audodetloy" name="ansible-role-autodeploy" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/pip" name="ansible-role-pip" groups="roles,supervio" remote="vmware"/>
