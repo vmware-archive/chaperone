@@ -46,6 +46,7 @@
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/autodeploy" name="ansible-role-autodeploy" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/consul" name="ansible-role-consul" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/>
@@ -61,6 +62,9 @@
   <!-- roles from github -->
   <project path="ansible/roles/apache" name="geerlingguy/ansible-role-apache.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="gerrit,roles,supervio" remote="github"/>
+  <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,supervio" remote="github"/>
+  <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,supervio" remote="github"/>
+  <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,supervio" remote="github"/>
 
   <!-- user interface (django) -->
   <project path="ui" name="supervio-ui" groups="supervio" remote="vmware"/>
