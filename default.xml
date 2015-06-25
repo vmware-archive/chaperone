@@ -31,6 +31,7 @@
   <!-- SuperVIO -->
   <!-- modules -->
   <project path="ansible/modules/supervio" name="ansible-module-supervio" groups="modules,supervio" remote="vmware">
+    <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
     <copyfile src="dc_cluster.py" dest="ansible/library/dc_cluster.py" />
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="getids.py" dest="ansible/library/getids.py" />
