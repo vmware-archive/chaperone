@@ -36,6 +36,12 @@
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="getids.py" dest="ansible/library/getids.py" />
     <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
+
+    <!-- win_file module had a bug and was left out of ansible 1.9.1.  pull in the fixed version until
+         ansible release has a working version.  Remove at will after that. -->
+    <copyfile src="win_file.ps1" dest="ansible/library/win_file.ps1" />
+    <copyfile src="win_file.py" dest="ansible/library/win_file.py" />
+
   </project>
   <project path="ansible/modules/xml" name="ansible-xml" groups="modules,supervio" remote="vmware" >
     <copyfile src="library/xml" dest="ansible/library/xml" />
