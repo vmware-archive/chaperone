@@ -29,6 +29,7 @@
   <project path="ansible/roles/gerrit" name="ansible-role-gerrit" groups="gerrit" remote="vmware" />
 
   <!-- SuperVIO -->
+  <project path="setup" name="supervio-setup" groups="supervio" remote="vmware" />
   <!-- modules -->
   <project path="ansible/modules/supervio" name="ansible-module-supervio" groups="modules,supervio" remote="vmware">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
