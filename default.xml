@@ -61,6 +61,7 @@
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/photon" name="ansible-role-photon" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/pip" name="ansible-role-pip" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/redmine" name="ansible-role-redmine" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/repo" name="ansible-role-repo" groups="roles,supervio" remote="vmware"/>
