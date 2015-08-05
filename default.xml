@@ -81,6 +81,7 @@
 
   <!-- container image projects -->
   <project path="containers/docker/collectd" name="containers/docker-collectd" groups="supervio" remote="vmware"/>
+  <project path="containers/docker/graphite-api" name="containers/docker-graphite-api" groups="supervio" remote="vmware"/>
 
   <!-- user interface (django) -->
   <project path="ui" name="supervio-ui" groups="supervio" remote="vmware"/>
