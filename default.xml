@@ -73,6 +73,7 @@
   <project path="ansible/roles/supervio" name="ansible-role-supervio" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vcenter" name="ansible-role-vcenter" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vio" name="ansible-role-vio" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/graphite-api" name="ansible-role-graphite-api" groups="roles,supervio" remote="vmware"/>
 
   <!-- roles from github -->
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="gerrit,roles,supervio" remote="github"/>
