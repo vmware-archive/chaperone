@@ -72,6 +72,7 @@
   <project path="ansible/roles/sudo" name="ansible-role-sudo" groups="gerrit,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/supervio" name="ansible-role-supervio" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vcenter" name="ansible-role-vcenter" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/vcsa" name="ansible-role-vcsa" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vio" name="ansible-role-vio" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/graphite-api" name="ansible-role-graphite-api" groups="roles,supervio" remote="vmware"/>
 
