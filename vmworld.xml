@@ -21,7 +21,7 @@
            revision="master" />
 
   <!-- microservices -->
-  <project path="go/src/github.com/tdhite/go-reminders" name="go-reminders" groups="supercna,microservices" remote="vmware"/>
+  <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="supercna,microservices" remote="vmware"/>
 
   <!-- container image projects -->
   <!--project path="containers/docker/go-reminder" name="containers/docker-go-reminder" groups="supercna,microservices" remote="vmware"/-->
