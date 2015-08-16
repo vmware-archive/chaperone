@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github remote -->
+  <remote  name="github"
+           fetch="https://github.com" />
+
+  <!-- VMware general remote -->
+  <remote  name="vmware"
+           fetch="http://gerrit.cloudbuilders.vmware.local:8080"
+           review="gerrit.cloudbuilders.vmware.local:8080" />
+
+  <!-- NSBU Gitlab remote -->
+  <remote  name="vmos"
+           fetch="ssh://nsxgitlab.nicira.eng.vmware.com" />
+
+  <!-- Defaults for repo -->
+  <default remote="vmware"
+           sync-c="true"
+           sync-j="4"
+           revision="master" />
+
+  <!-- microservices -->
+  <project path="go/src/github.com/tdhite/go-reminders" name="go-reminders" groups="supercna,microservices" remote="vmware"/>
+
+  <!-- container image projects -->
+  <!--project path="containers/docker/go-reminder" name="containers/docker-go-reminder" groups="supercna,microservices" remote="vmware"/-->
+
+</manifest>
