@@ -60,6 +60,10 @@
   <project path="ansible/roles/autodeploy" name="ansible-role-autodeploy" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/consul" name="ansible-role-consul" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/kibana" name="ansible-role-kibana" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/kubernetes_master" name="ansible-role-kubernetes-master" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/kubernetes_node" name="ansible-role-kubernetes-node" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/elasticsearch" name="ansible-role-elasticsearch" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/logstash-server" name="ansible-role-logstash-server" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/>
