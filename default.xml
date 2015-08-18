@@ -71,6 +71,7 @@
   <project path="ansible/roles/photon" name="ansible-role-photon" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/pip" name="ansible-role-pip" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/redmine" name="ansible-role-redmine" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/registrator" name="ansible-role-registrator" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/repo" name="ansible-role-repo" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/sshkeys" name="ansible-role-sshkeys" groups="gerrit,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/sudo" name="ansible-role-sudo" groups="gerrit,roles,supervio" remote="vmware"/>
@@ -87,8 +88,11 @@
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,supervio" remote="github"/>
 
   <!-- container image projects -->
-  <project path="containers/docker/collectd" name="containers/docker-collectd" groups="supervio" remote="vmware"/>
-  <project path="containers/docker/graphite-api" name="containers/docker-graphite-api" groups="supervio" remote="vmware"/>
+  <project path="containers/docker/collectd" name="containers/docker-collectd" groups="supervio,docker" remote="vmware"/>
+  <project path="containers/docker/elasticsearch" name="containers/docker-elasticsearch" groups="supervio,docker,elk" remote="vmware"/>
+  <project path="containers/docker/graphite-api" name="containers/docker-graphite-api" groups="supervio,docker" remote="vmware"/>
+  <project path="containers/docker/kibana" name="containers/docker-kibana" groups="supervio,docker,elk" remote="vmware"/>
+  <project path="containers/docker/logstash-server" name="containers/docker-logstash-server" groups="supervio,docker,elk" remote="vmware"/>
 
   <!-- user interface (django) -->
   <project path="ui" name="supervio-ui" groups="supervio" remote="vmware"/>
