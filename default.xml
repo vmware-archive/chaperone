@@ -100,6 +100,9 @@
 
   <project path="scripts" name="supervio-scripts" groups="supervio" remote="vmware" />
 
+  <!-- microservices -->
+  <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="supervio,docker,microservices" remote="vmware"/>
+
   <!-- VMOS -->
   <project path="vmos/brussell/cinder-havana" name="brussell/cinder-havana.git" groups="vmos" remote="vmos"/>
   <project path="vmos/brussell/thermosite" name="brussell/thermosite.git" groups="vmos" remote="vmos"/>
