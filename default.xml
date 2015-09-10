@@ -38,7 +38,6 @@
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
     <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
     <copyfile src="add_nfs_ds.py" dest="ansible/library/add_nfs_ds.py" />
-    <copyfile src="ref_host_profile.py" dest="ansible/library/ref_host_profile.py" />
     <copyfile src="deploy_vcsa.py" dest="ansible/library/deploy_vcsa.py" />
 
     <!-- win_file module had a bug and was left out of ansible 1.9.1.  pull in the fixed version until
