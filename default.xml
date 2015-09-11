@@ -33,7 +33,7 @@
   <!-- modules -->
   <project path="ansible/modules/supervio" name="ansible-module-supervio" groups="modules,supervio" remote="vmware">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
-    <copyfile src="setup.py" dest="ansible/library/setup.py" />
+    <copyfile src="vcenter_setup.py" dest="ansible/library/vcenter_setup.py" />
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
     <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
