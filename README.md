@@ -32,8 +32,9 @@ Developers will also need credentials to gerrit. *TODO: Add process*
 Instructions download, install and deploy the Chaperone UI tools to configure a
 vCenter server environment are [here](docs/setup.md)
 
-###Running Confuence
-TODO Add link to run.md
+###Running Chaperone
+Information on initial environments and running the Chaperone tools against the
+environment are [here](docs/run.md)
 
 ###Structure and Standards
 *TODO Add README describing the components of the code, what standards to adhere to, etc*

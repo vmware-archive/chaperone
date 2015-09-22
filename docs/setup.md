@@ -25,6 +25,7 @@ Getting Started
 
 ###Install a vmware user
     sudo adduser vmware
+    sudo adduser vmware sudo
 
 ### Get the IP address of the CDS:
 
@@ -46,7 +47,9 @@ CDS will need to be exposed through an external ip. See [Environments](env.md)
 
 ###Install a vmware user
     sudo adduser vmware
+    sudo adduser vmware sudo
 
+Complete the rest of the steps as vmware
 
 ### Setup For Gerrit Access
 
@@ -54,22 +57,18 @@ Install [google repo](https://source.android.com/source/downloading.html) in the
 
 Install and configure git
 
-
     sudo apt-get install git
     git config --global user.email "your@email.com"
     git config --global user.name "Your Name"
 
 Where your email and name are replaced with those associated with your gerrit id
 
-
-
 *Begin to be removed when gerrit is no longer local:*
 
 
 Add the following to /etc/hosts file:
-
-
-    IP-ADDR-OF-GERRIT-SERVER gerrit.cloudbuilders.vmware.local
+    
+IP-ADDR-OF-GERRIT-SERVER gerrit.cloudbuilders.vmware.local
 
 where IP-ADDR-OF-GERRIT-SERVER is the current ip address of the gerrit
 
@@ -94,8 +93,8 @@ similar to the following so you can more easily access Gerrit:
 
 Change the "MYUSERID" to your own gerrit userid
 
-Using ssh-keygen, add a key for gerrit to ~/.ssh/cloudbuilders/ and
-register the resulting id_rsa.pub key with Gerrit.
+Using ssh-keygen from the ~/.ssh directory add a key for gerrit to ~/.ssh/cloudbuilders/
+and register the resulting id_rsa.pub key with Gerrit.
 
 ### Install Ansible
 Run these commands on the development environment server.
@@ -229,4 +228,3 @@ TODO: Link to sample answer files for each package tool
 
 ##Next Step: Running the Chaperone Tool
 See [Running Chaperone](run.md)
-
