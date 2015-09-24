@@ -82,6 +82,7 @@
   <project path="ansible/roles/collectd" name="ansible-role-collectd" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vrops" name="ansible-role-vrops" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vra" name="ansible-role-vra" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/vrli" name="ansible-role-vrli" groups="roles,supervio" remote="vmware"/>
  
  <!-- roles from github -->
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="gerrit,roles,supervio" remote="github"/>
