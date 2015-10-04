@@ -91,6 +91,7 @@
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,supervio" remote="github"/>
 
   <!-- container image projects -->
+  <project path="containers/docker/chaperone" name="containers/docker-chaperone" groups="supervio,docker" remote="vmware"/>
   <project path="containers/docker/collectd" name="containers/docker-collectd" groups="supervio,docker" remote="vmware"/>
   <project path="containers/docker/elasticsearch" name="containers/docker-elasticsearch" groups="supervio,docker,elk" remote="vmware"/>
   <project path="containers/docker/graphite-api" name="containers/docker-graphite-api" groups="supervio,docker" remote="vmware"/>
