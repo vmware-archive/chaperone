@@ -39,6 +39,8 @@
     <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
     <copyfile src="add_nfs_ds.py" dest="ansible/library/add_nfs_ds.py" />
     <copyfile src="does_vm_exist.py" dest="ansible/library/does_vm_exist.py" />
+    <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py" />
+    <copyfile src="vra_postgresdb_setup.py" dest="ansible/library/vra_postgresdb_setup.py" />
 
     <!-- win_file module had a bug and was left out of ansible 1.9.1.  pull in the fixed version until
          ansible release has a working version.  Remove at will after that. -->
@@ -80,9 +82,12 @@
   <project path="ansible/roles/vio" name="ansible-role-vio" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/graphite-api" name="ansible-role-graphite-api" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/collectd" name="ansible-role-collectd" groups="roles,supervio" remote="vmware"/>
+
+  <!-- roles from github -->
   <project path="ansible/roles/vrops" name="ansible-role-vrops" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vra" name="ansible-role-vra" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vrli" name="ansible-role-vrli" groups="roles,supervio" remote="vmware"/>
+ <project path="ansible/roles/vrb" name="ansible-role-vrb" groups="roles,supervio" remote="vmware"/>
  
  <!-- roles from github -->
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="gerrit,roles,supervio" remote="github"/>
