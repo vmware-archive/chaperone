@@ -21,12 +21,13 @@
            revision="master" />
 
   <!-- playbooks -->
-  <project path="ansible/playbooks" name="ansible-playbooks-supervio" groups="gerrit,playbooks,supervio" remote="vmware"/>
+  <project path="ansible/playbooks" name="ansible-playbooks-supervio" groups="sdlc,playbooks,supervio" remote="vmware"/>
 
-  <!-- gerrit -->
-  <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="gerrit" remote="github" />
-  <project path="ansible/roles/openldap" name="ansible-role-openldap" groups="gerrit" remote="vmware" />
-  <project path="ansible/roles/gerrit" name="ansible-role-gerrit" groups="gerrit" remote="vmware" />
+  <!-- build and source infrastructure -->
+  <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="sdlc" remote="github" />
+  <project path="ansible/roles/openldap" name="ansible-role-openldap" groups="sdlc" remote="vmware" />
+  <project path="ansible/roles/gerrit" name="ansible-role-gerrit" groups="sdlc" remote="vmware" />
+  <project path="ansible/roles/jenkins" name="ansible-role-jenkins" groups="sdlc" remote="vmware" />
 
   <!-- SuperVIO -->
   <project path="setup" name="supervio-setup" groups="supervio" remote="vmware" />
@@ -74,8 +75,8 @@
   <project path="ansible/roles/redmine" name="ansible-role-redmine" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/registrator" name="ansible-role-registrator" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/repo" name="ansible-role-repo" groups="roles,supervio" remote="vmware"/>
-  <project path="ansible/roles/sshkeys" name="ansible-role-sshkeys" groups="gerrit,roles,supervio" remote="vmware"/>
-  <project path="ansible/roles/sudo" name="ansible-role-sudo" groups="gerrit,roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/sshkeys" name="ansible-role-sshkeys" groups="sdlc,roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/sudo" name="ansible-role-sudo" groups="sdlc,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/supervio" name="ansible-role-supervio" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vcenter" name="ansible-role-vcenter" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vcsa" name="ansible-role-vcsa" groups="roles,supervio" remote="vmware"/>
@@ -87,10 +88,10 @@
   <project path="ansible/roles/vrops" name="ansible-role-vrops" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vra" name="ansible-role-vra" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vrli" name="ansible-role-vrli" groups="roles,supervio" remote="vmware"/>
- <project path="ansible/roles/vrb" name="ansible-role-vrb" groups="roles,supervio" remote="vmware"/>
- 
- <!-- roles from github -->
-  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="gerrit,roles,supervio" remote="github"/>
+  <project path="ansible/roles/vrb" name="ansible-role-vrb" groups="roles,supervio" remote="vmware"/>
+
+  <!-- roles from github -->
+  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,supervio" remote="github"/>
   <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,supervio" remote="github"/>
