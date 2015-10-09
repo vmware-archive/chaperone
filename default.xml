@@ -39,8 +39,8 @@
     <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
     <copyfile src="add_nfs_ds.py" dest="ansible/library/add_nfs_ds.py" />
     <copyfile src="does_vm_exist.py" dest="ansible/library/does_vm_exist.py" />
-    <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py" />
-    <copyfile src="vra_postgresdb_setup.py" dest="ansible/library/vra_postgresdb_setup.py" />
+    <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py"/>
+    <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
 
     <!-- win_file module had a bug and was left out of ansible 1.9.1.  pull in the fixed version until
          ansible release has a working version.  Remove at will after that. -->
