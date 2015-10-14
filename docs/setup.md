@@ -101,8 +101,7 @@ Run these commands on the development environment server.
 
     sudo apt-get install python-pip
     sudo easy_install pip
-    sudo apt-get
-    install python-dev
+    sudo apt-get install python-dev
     sudo pip install ansible
 
 Note: If an existing environment is being used and ansible has been installed
