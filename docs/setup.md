@@ -192,7 +192,7 @@ CDS automatically with commands similar to the following:
 
 
     # builds chaperone sddc application
-    cd ~/workspace/ansible/playbooks/supervio-ui
+    cd ~/workspace/ansible/playbooks/supersddc-ui
     # be sure to update the inventory and /etc/hosts files to
     # the right network adress of the supersddc-ui deploy
     ansible-playbook --ask-pass --ask-sudo-pass -i inventory base.yml
