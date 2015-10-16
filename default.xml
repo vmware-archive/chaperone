@@ -28,6 +28,7 @@
   <project path="ansible/roles/openldap" name="ansible-role-openldap" groups="sdlc" remote="vmware" />
   <project path="ansible/roles/gerrit" name="ansible-role-gerrit" groups="sdlc" remote="vmware" />
   <project path="ansible/roles/jenkins" name="ansible-role-jenkins" groups="sdlc" remote="vmware" />
+  <project path="ansible/roles/haproxy" name="ansible-role-haproxy" groups="sdlc" remote="vmware" />
 
   <!-- SuperVIO -->
   <project path="setup" name="supervio-setup" groups="supervio" remote="vmware" />
