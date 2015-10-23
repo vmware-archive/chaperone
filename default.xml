@@ -56,6 +56,7 @@
   <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,supervio" remote="github">
     <copyfile src="vsphere" dest="ansible/library/vsphere" />
   </project>
+  <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github" />
 
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,supervio" remote="vmware"/>
@@ -69,7 +70,7 @@
   <project path="ansible/roles/elasticsearch" name="ansible-role-elasticsearch" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/logstash-server" name="ansible-role-logstash-server" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
-  <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/>
+  <!-- <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/> -->
   <project path="ansible/roles/ovftool" name="ansible-role-ovftool" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/photon" name="ansible-role-photon" groups="sdlc,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/pip" name="ansible-role-pip" groups="sdlc,roles,supervio" remote="vmware"/>
@@ -84,8 +85,6 @@
   <project path="ansible/roles/vio" name="ansible-role-vio" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/graphite-api" name="ansible-role-graphite-api" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/collectd" name="ansible-role-collectd" groups="roles,supervio" remote="vmware"/>
-
-  <!-- roles from github -->
   <project path="ansible/roles/vrops" name="ansible-role-vrops" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vra" name="ansible-role-vra" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vrli" name="ansible-role-vrli" groups="roles,supervio" remote="vmware"/>
@@ -96,6 +95,7 @@
   <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,supervio" remote="github"/>
+  <project path="ansible/roles/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github" />
 
   <!-- container image projects -->
   <project path="containers/docker/chaperone" name="containers/docker-chaperone" groups="supervio,docker,sdlc" remote="vmware"/>
