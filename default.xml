@@ -109,8 +109,6 @@
   <!-- user interface (django) -->
   <project path="ui" name="supervio-ui" groups="supervio" remote="vmware"/>
 
-  <project path="scripts" name="supervio-scripts" groups="supervio" remote="vmware" />
-
   <!-- microservices -->
   <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="supervio,docker,microservices" remote="vmware"/>
 
