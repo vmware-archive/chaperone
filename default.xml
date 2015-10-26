@@ -60,6 +60,10 @@
     <copyfile src="vsphere" dest="ansible/library/vsphere" />
   </project>
 
+  <!-- <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github">
+    <copyfile src="nsx/library" dest="ansible/library/nsx" />
+  </project> -->
+
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/apache" name="ansible-role-apache.git" groups="roles,supervio" remote="vmware"/>
@@ -104,7 +108,7 @@
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,supervio" remote="github"/>
 
   <!-- nsxansible role from github - the directory structure is for a playbook, we need to modify slightly -->
-  <project path="ansible/roles/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github">
+  <project path="ansible/roles/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github" >
     <!-- Custom modules are maintained in nsx/library -->
     <copyfile src="library/__init__.py" dest="ansible/library/nsx/__init__.py" />
     <copyfile src="library/nsx_cluster_prep.py" dest="ansible/library/nsx/nsx_cluster_prep.py" />
@@ -122,6 +126,9 @@
     <!-- Two primary roles need to be combined and renamed into one -->
     <copyfile src="roles/base-config-nsx/tasks/main.yml" dest="ansible/roles/nsx/tasks/base-config-nsx.yml" />
     <copyfile src="roles/deploy-nsx-ova/tasks/main.yml" dest="ansible/roles/nsx/tasks/deploy-nsx-ova.yml" />
+  </project>
+  <project path="../../../../../tmp/" name="vmware/nsxraml.git" groups="modules,supervio" remote="github" >
+    <copyfile src="nsxvapiv614.raml" dest="ansible/roles/nsx/files/nsxvapiv614.raml" />
   </project>
 
   <!-- container image projects -->
