@@ -56,7 +56,9 @@
   <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,supervio" remote="github">
     <copyfile src="vsphere" dest="ansible/library/vsphere" />
   </project>
-  <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github" />
+  <!-- <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github">
+    <copyfile src="nsx/library" dest="ansible/library/nsx" />
+  </project> -->
 
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,supervio" remote="vmware"/>
@@ -95,7 +97,27 @@
   <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,supervio" remote="github"/>
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,supervio" remote="github"/>
-  <project path="ansible/roles/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github" />
+
+  <!-- nsxansible role from github - the directory structure is for a playbook, we need to modify slightly -->
+  <project path="ansible/roles/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github">
+    <!-- Custom modules are maintained in nsx/library -->
+    <copyfile src="library/__init__.py" dest="ansible/library/nsx/__init__.py" />
+    <copyfile src="library/nsx_cluster_prep.py" dest="ansible/library/nsx/nsx_cluster_prep.py" />
+    <copyfile src="library/nsx_controllers.py" dest="ansible/library/nsx/nsx_controllers.py" />
+    <copyfile src="library/nsx_deploy_ova.py" dest="ansible/library/nsx/nsx_deploy_ova.py" />
+    <copyfile src="library/nsx_ippool.py" dest="ansible/library/nsx/nsx_ippool.py" />
+    <copyfile src="library/nsx_logical_switch.py" dest="ansible/library/nsx/nsx_logical_switch.py" />
+    <copyfile src="library/nsx_macset.py" dest="ansible/library/nsx/nsx_macset.py" />
+    <copyfile src="library/nsx_segment_id_pool.py" dest="ansible/library/nsx/nsx_segment_id_pool.py" />
+    <copyfile src="library/nsx_sso_registration.py" dest="ansible/library/nsx/nsx_sso_registration.py" />
+    <copyfile src="library/nsx_transportzone.py" dest="ansible/library/nsx/nsx_transportzone.py" />
+    <copyfile src="library/nsx_vc_registration.py" dest="ansible/library/nsx/nsx_vc_registration.py" />
+    <copyfile src="library/nsx_vxlan_prep.py" dest="ansible/library/nsx/nsx_vxlan_prep.py" />
+    <copyfile src="library/vcenter_gather_moids.py" dest="ansible/library/nsx/vcenter_gather_moids.py" />
+    <!-- Two primary roles need to be combined and renamed into one -->
+    <copyfile src="roles/base-config-nsx/tasks/main.yml" dest="ansible/roles/nsx/tasks/base-config-nsx.yml" />
+    <copyfile src="roles/deploy-nsx-ova/tasks/main.yml" dest="ansible/roles/nsx/tasks/deploy-nsx-ova.yml" />
+  </project>
 
   <!-- container image projects -->
   <project path="containers/docker/chaperone" name="containers/docker-chaperone" groups="supervio,docker,sdlc" remote="vmware"/>
