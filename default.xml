@@ -32,6 +32,7 @@
 
   <!-- SuperVIO -->
   <project path="setup" name="supervio-setup" groups="supervio" remote="vmware" />
+
   <!-- modules -->
   <project path="ansible/modules/supervio" name="ansible-module-supervio" groups="modules,supervio" remote="vmware">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
@@ -57,9 +58,6 @@
   <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,supervio" remote="github">
     <copyfile src="vsphere" dest="ansible/library/vsphere" />
   </project>
-  <!-- <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github">
-    <copyfile src="nsx/library" dest="ansible/library/nsx" />
-  </project> -->
 
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,supervio" remote="vmware"/>
@@ -67,6 +65,7 @@
   <project path="ansible/roles/autodeploy" name="ansible-role-autodeploy" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/consul" name="ansible-role-consul" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/iptables" name="ansible-role-iptables" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/kibana" name="ansible-role-kibana" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/kubernetes_master" name="ansible-role-kubernetes-master" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/kubernetes_node" name="ansible-role-kubernetes-node" groups="roles,supervio" remote="vmware"/>
