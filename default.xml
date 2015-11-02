@@ -73,6 +73,7 @@
   <project path="ansible/roles/elasticsearch" name="ansible-role-elasticsearch" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/logstash-server" name="ansible-role-logstash-server" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/nfs" name="ansible-role-nfs" groups="roles,supervio" remote="vmware"/>
   <!-- <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/> -->
   <project path="ansible/roles/ovftool" name="ansible-role-ovftool" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/photon" name="ansible-role-photon" groups="sdlc,roles,supervio" remote="vmware"/>
