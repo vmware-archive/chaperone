@@ -129,6 +129,7 @@
   <project path="containers/docker/jenkins" name="containers/docker-jenkins" groups="supervio,docker,sdlc" remote="vmware"/>
   <project path="containers/docker/kibana" name="containers/docker-kibana" groups="supervio,docker" remote="vmware"/>
   <project path="containers/docker/logstash-server" name="containers/docker-logstash-server" groups="supervio,docker" remote="vmware"/>
+  <project path="containers/docker/vrpt" name="containers/docker-vrpt" groups="supervio,docker,sdlc" remote="vmware"/>
 
   <!-- user interface (django) -->
   <project path="ui" name="supervio-ui" groups="supervio" remote="vmware"/>
