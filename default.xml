@@ -63,9 +63,11 @@
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/apache" name="ansible-role-apache.git" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/assets" name="ansible-role-assets" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/autodeploy" name="ansible-role-autodeploy" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/consul" name="ansible-role-consul" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,supervio" remote="vmware"/>
+  <project path="ansible/roles/docker" name="ansible-role-docker" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/iptables" name="ansible-role-iptables" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/kibana" name="ansible-role-kibana" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/kubernetes_master" name="ansible-role-kubernetes-master" groups="roles,supervio" remote="vmware"/>
@@ -93,8 +95,7 @@
   <project path="ansible/roles/vra" name="ansible-role-vra" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vrli" name="ansible-role-vrli" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/vrb" name="ansible-role-vrb" groups="roles,supervio" remote="vmware"/>
-  <project path="ansible/roles/assets" name="ansible-role-assets" groups="roles,supervio" remote="vmware"/>
-
+  <project path="ansible/roles/vrpt" name="ansible-role-vrpt" groups="roles,supervio" remote="vmware"/>
 
   <!-- roles from github -->
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,supervio" remote="github"/>
