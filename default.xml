@@ -111,19 +111,19 @@
 
   <!-- nsxansible role from github - the directory structure is for a playbook, we need to modify slightly -->
   <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github" >
-    <copyfile src="__init__.py" dest="../../library/__init__.py" />
-    <copyfile src="nsx_cluster_prep.py" dest="../../library/nsx_cluster_prep.py" />
-    <copyfile src="nsx_controllers.py" dest="../../library/nsx_controllers.py" />
-    <copyfile src="nsx_deploy_ova.py" dest="../../library/nsx_deploy_ova.py" />
-    <copyfile src="nsx_ippool.py" dest="../../library/nsx_ippool.py" />
-    <copyfile src="nsx_logical_switch.py" dest="../../library/nsx_logical_switch.py" />
-    <copyfile src="nsx_macset.py" dest="../../library/nsx_macset.py" />
-    <copyfile src="nsx_segment_id_pool.py" dest="../../library/nsx_segment_id_pool.py" />
-    <copyfile src="nsx_sso_registration.py" dest="../../library/nsx_sso_registration.py" />
-    <copyfile src="nsx_transportzone.py" dest="../../library/nsx_transportzone.py" />
-    <copyfile src="nsx_vc_registration.py" dest="../../library/nsx_vc_registration.py" />
-    <copyfile src="nsx_vxlan_prep.py" dest="../../library/nsx_vxlan_prep.py" />
-    <copyfile src="vcenter_gather_moids.py" dest="../../library/vcenter_gather_moids.py" />
+    <copyfile src="library/__init__.py" dest="ansible/library/__init__.py" />
+    <copyfile src="library/nsx_cluster_prep.py" dest="ansible/library/nsx_cluster_prep.py" />
+    <copyfile src="library/nsx_controllers.py" dest="ansible/library/nsx_controllers.py" />
+    <copyfile src="library/nsx_deploy_ova.py" dest="ansible/library/nsx_deploy_ova.py" />
+    <copyfile src="library/nsx_ippool.py" dest="ansible/library/nsx_ippool.py" />
+    <copyfile src="library/nsx_logical_switch.py" dest="ansible/library/nsx_logical_switch.py" />
+    <copyfile src="library/nsx_macset.py" dest="ansible/library/nsx_macset.py" />
+    <copyfile src="library/nsx_segment_id_pool.py" dest="ansible/library/nsx_segment_id_pool.py" />
+    <copyfile src="library/nsx_sso_registration.py" dest="ansible/library/nsx_sso_registration.py" />
+    <copyfile src="library/nsx_transportzone.py" dest="ansible/library/nsx_transportzone.py" />
+    <copyfile src="library/nsx_vc_registration.py" dest="ansible/library/nsx_vc_registration.py" />
+    <copyfile src="library/nsx_vxlan_prep.py" dest="ansible/library/nsx_vxlan_prep.py" />
+    <copyfile src="library/vcenter_gather_moids.py" dest="ansible/library/vcenter_gather_moids.py" />
   </project>
   
   <!--
