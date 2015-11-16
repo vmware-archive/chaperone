@@ -82,7 +82,7 @@
   <project path="ansible/roles/logstash-server" name="ansible-role-logstash-server" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/nfs" name="ansible-role-nfs" groups="roles,supervio" remote="vmware"/>
-  <!-- <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/> -->
+  <project path="ansible/roles/nsx" name="ansible-role-nsx" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/ovftool" name="ansible-role-ovftool" groups="roles,supervio" remote="vmware"/>
   <project path="ansible/roles/photon" name="ansible-role-photon" groups="sdlc,roles,supervio" remote="vmware"/>
   <project path="ansible/roles/pip" name="ansible-role-pip" groups="sdlc,roles,supervio" remote="vmware"/>
@@ -124,14 +124,12 @@
     <copyfile src="library/nsx_vc_registration.py" dest="ansible/library/nsx_vc_registration.py" />
     <copyfile src="library/nsx_vxlan_prep.py" dest="ansible/library/nsx_vxlan_prep.py" />
     <copyfile src="library/vcenter_gather_moids.py" dest="ansible/library/vcenter_gather_moids.py" />
+    <copyfile src="roles/base-config-nsx/tasks/main.yml" dest="ansible/roles/nsx/tasks/base-config-nsx.yml" />
+    <copyfile src="roles/deploy-nsx-ova/tasks/main.yml" dest="ansible/roles/nsx/tasks/deploy-nsx-ova.yml" />
   </project>
   
-  <!--
-  <project path="ansible/roles/nsx" name="vmware/nsxraml.git" groups="modules,supervio" remote="github" >
-    <copyfile src="nsxvapiv614.raml" dest="ansible/roles/nsx/files/nsxvapiv614.raml" />
-    <copyfile src="schemas" dest="ansible/roles/nsx/files/schemas" />
+  <project path="ansible/roles/nsx/files" name="vmware/nsxraml.git" groups="modules,supervio" remote="github" >
   </project>
-  -->
 
   <!-- container image projects -->
   <project path="containers/docker/chaperone" name="containers/docker-chaperone" groups="supervio,docker,sdlc" remote="vmware"/>
