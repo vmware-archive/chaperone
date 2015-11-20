@@ -56,15 +56,10 @@
   <project path="ansible/modules/xml" name="ansible-xml" groups="modules,supervio" remote="vmware" >
     <copyfile src="library/xml" dest="ansible/library/xml" />
   </project>
-  
+
   <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,supervio" remote="github">
     <copyfile src="vsphere" dest="ansible/library/vsphere" />
   </project>
-
-  <!--
-  <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,supervio" remote="github">
-    <copyfile src="nsx/library" dest="ansible/library" />
-  </project> -->
 
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,supervio" remote="vmware"/>
