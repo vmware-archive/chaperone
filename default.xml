@@ -36,11 +36,15 @@
   <!-- modules -->
   <project path="ansible/modules/supervio" name="ansible-module-supervio" groups="modules,supervio" remote="vmware">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
-    <copyfile src="vcenter_setup.py" dest="ansible/library/vcenter_setup.py" />
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
     <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
-    <copyfile src="add_nfs_ds.py" dest="ansible/library/add_nfs_ds.py" />
+    <copyfile src="vcenter_add_nfs_ds.py" dest="ansible/library/vcenter_add_nfs_ds.py" />
+    <copyfile src="vcenter_addhost.py" dest="ansible/library/vcenter_addhost.py" />
+    <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
+    <copyfile src="vcenter_cluster.py" dest="ansible/library/vcenter_cluster.py" />
+    <copyfile src="vcenter_config_host_vds_only.py" dest="ansible/library/vcenter_config_host_vds_only.py" />
+    <copyfile src="vcenter_datacenter.py" dest="ansible/library/vcenter_datacenter.py" />
     <copyfile src="does_vm_exist.py" dest="ansible/library/does_vm_exist.py" />
     <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py"/>
     <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
