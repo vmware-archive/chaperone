@@ -33,7 +33,7 @@
   <!-- SuperVIO -->
   <project path="setup" name="chaperone-setup" groups="chaperone" remote="vmware" />
 
-  <!-- modules -->
+  <!-- modules from vmware -->
   <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmware">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
@@ -57,20 +57,20 @@
     <copyfile src="win_file.py" dest="ansible/library/win_file.py" />
 
   </project>
-  <project path="ansible/modules/xml" name="ansible-xml" groups="modules,chaperone" remote="vmware" >
-    <copyfile src="library/xml" dest="ansible/library/xml" />
-  </project>
 
+  <!-- modules from github-->
   <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,chaperone" remote="github">
     <copyfile src="vsphere" dest="ansible/library/vsphere" />
   </project>
 
+  <project path="ansible/modules/xml" name="tomhite/ansible-xml" groups="modules,chaperone" remote="github" >
+    <copyfile src="library/xml" dest="ansible/library/xml" />
+  </project>
+
   <!-- roles from vmware -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,chaperone" remote="vmware"/>
-  <project path="ansible/roles/apache" name="ansible-role-apache.git" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/assets" name="ansible-role-assets" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/autodeploy" name="ansible-role-autodeploy" groups="roles,chaperone" remote="vmware"/>
-  <project path="ansible/roles/consul" name="ansible-role-consul" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/docker" name="ansible-role-docker" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/iptables" name="ansible-role-iptables" groups="roles,chaperone" remote="vmware"/>
@@ -94,8 +94,6 @@
   <project path="ansible/roles/vcenter" name="ansible-role-vcenter" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/vcsa" name="ansible-role-vcsa" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/vio" name="ansible-role-vio" groups="roles,chaperone" remote="vmware"/>
-  <project path="ansible/roles/graphite-api" name="ansible-role-graphite-api" groups="roles,chaperone" remote="vmware"/>
-  <project path="ansible/roles/collectd" name="ansible-role-collectd" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/vrops" name="ansible-role-vrops" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/vra" name="ansible-role-vra" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/vrli" name="ansible-role-vrli" groups="roles,chaperone" remote="vmware"/>
@@ -103,6 +101,10 @@
   <project path="ansible/roles/vrpt" name="ansible-role-vrpt" groups="roles,chaperone" remote="vmware"/>
 
   <!-- roles from github -->
+  <project path="ansible/roles/apache" name="tomhite/ansible-role-apache.git" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/collectd" name="tomhite/ansible-role-collectd" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/consul" name="tomhite/ansible-role-consul" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,chaperone" remote="github"/>
