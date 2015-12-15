@@ -38,7 +38,7 @@
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
-    <copyfile src="vPortgroup.py" dest="ansible/library/vPortgroup.py" />
+    <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
     <copyfile src="vcenter_add_nfs_ds.py" dest="ansible/library/vcenter_add_nfs_ds.py" />
     <copyfile src="vcenter_addhost.py" dest="ansible/library/vcenter_addhost.py" />
     <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
@@ -128,7 +128,7 @@
     <copyfile src="roles/base-config-nsx/tasks/main.yml" dest="ansible/roles/nsx/tasks/base-config-nsx.yml" />
     <copyfile src="roles/deploy-nsx-ova/tasks/main.yml" dest="ansible/roles/nsx/tasks/deploy-nsx-ova.yml" />
   </project>
-  
+
   <project path="ansible/roles/nsx/files" name="vmware/nsxraml.git" groups="modules,chaperone" remote="github" >
   </project>
 
