@@ -1,14 +1,42 @@
 Chaperone
 =========
-Chaperone is a DevOps Automation toolkit for deployment and configuration for an
-SDDC based Hybrid Cloud Management platform. It is intended  to expedite and
-standardize  "typical" deployments and configuration of VMware solutions
-including VSphere/vCenter, NSX, VIO, vRA, vRO, vROps, vRLI, vRB.
+Chaperone is an Automation toolkit rooted in DevOps principals for deploying
+and configurating a SDDC based Hybrid Cloud Management platform. It is
+intended to expedite and standardize  "typical" deployments and configuration
+of VMware solutions including VSphere/vCenter, NSX, VIO, vRA, vRO, vROps, vRLI,
+vRB and others as the toolkit grows.
 
-The toolkit consists of GUI's used to configure and deploy  standard one of
-several standard platforms. Desired settings are entered into the GUI, which
-runs ansible scripts to configure and deploy the environment, Standard
-configuration tools currently include:
+It is a work in progress, and always will be such a facility as we add new
+functionalities and products to the Chaperone base.
+
+The toolkit consists of web based interfaces used to configure and deploy
+standard one of several standard platforms. There are to interfaces with which
+users of Chaperone interact:
+
+- chaperone-admin-ui (e.g., http://chaperone-admin-ui.corp.local)
+- chaperone-ui (e.g., http://chaperone-ui.corp.local)
+
+The admin UI (chaperone-admin-ui) is an interface that allows one to select
+from a list of SDDC features they would like to deploy, and basic ambient
+environment information, such as DNS servers, NTP servers, etc. Once entered
+into the various "Prepare" menu forms, clicking 'Save' saves the
+configuration as a 'codified design.' Basically, that means the information
+is saved in a YAML file as a set of 'parameters' or, more commonly Ansible
+variables. 
+
+Once the admin ui Prepare menu forms are complete and saved, the next step is
+clicking on the Install menu and thereafter "Saving the Configuration." That
+is a button on the Install menu that generates the second web interface, the
+chaperone-ui site. 
+
+The chaperone-ui site is the site used to configure the SDDC installations.
+That process is the same as the admin UI, wherein the user fills out the Prepare
+forms and saves them. Thereafter, the Install menu provides buttons for the
+various tasks that must be done to complete the SDDC install. To perform
+the various installations and configurations, Chaperone generally runs ansible
+plays as a resulte of clicking on one of the 'Install' menu buttons. The plays
+configure and deploy the environment, pursuant to the saved Prepare values.
+Standard configurations we work on currently include:
 
 - Chaperone for VIO (Open Stack Integration)
 - Chaperone for CNA (Cloud Native Application Platform)
