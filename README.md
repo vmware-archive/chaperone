@@ -80,7 +80,7 @@ tools and underlying Ansible plays, Python modules and other required code
 bases are [here](docs/setup.md)
 
 ###Running Chaperone
-[Information on initial environments and running](docs/run.me) the Chaperone tools against
+[Information on initial environments and running](docs/run.md) the Chaperone tools against
 an appropriate SDDC environment are [here](docs/run.md)
 
 ###Structure and Standards
