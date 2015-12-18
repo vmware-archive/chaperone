@@ -4,8 +4,8 @@ Once one or more of the Chaperone package tools has been [deployed](setup.md)
 to a Chaperone Deployment Server, a vCenter Server environment will be needed
 for the Chaperone tool to configure.
 
-##Setting up the vCenter Server Environment
-The Chaperone tools require some initial setup in the vCenter server
+##Setting up a management environment -- a vCenter Server Environment
+The Chaperone tools require some initial setup in a vCenter server
 environment. While the state of the setup may vary, for a development
 environment the typical configuration is:
 
@@ -25,8 +25,8 @@ For a development environment, there are two deployment configurations (see [Env
 
 If the Chaperone Deployment Server is external to the vCenter Server
 environment, the vCenter server https port must be exposed externally through
-the router.
-TODO: are there other ports/VM's that need to be exposed?
+the router. It may also be useful to have a 'jump' server (VM) alongside the CDS
+so that you can start the vCenter web client as necessary to review vCenter.
 
 If the CDS is deployed within the vCenter Server environment, the ssh port of
 Chaperone Deployment Server must be exposed through the router.

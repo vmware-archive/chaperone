@@ -63,32 +63,19 @@ Install and configure git
 
 Where your email and name are replaced with those associated with your gerrit id
 
-*Begin to be removed when gerrit is no longer local:*
-
-
-Add the following to /etc/hosts file:
-    
-IP-ADDR-OF-GERRIT-SERVER gerrit.cloudbuilders.vmware.local
-
-where IP-ADDR-OF-GERRIT-SERVER is the current ip address of the gerrit
-
-server documented [here](https://wiki.eng.vmware.com/PSO/MSI_CloudBuilders/SuperVIO)
-
-*End to be removed when gerrit is no longer local:*
-
-
-On your development host, your ~/.ssh/config file should have something
-similar to the following so you can more easily access Gerrit:
+For gerrit committers: on your development host, your~/.ssh/config file
+should have something similar to the following so you can more easily access Gerrit:
 
 
     Host *
-    StrictHostKeyChecking no
-    UserKnownHostsFile=/dev/null
-    Host gerrit.cloudbuilders.vmware.local
-    Hostname gerrit.cloudbuilders.vmware.local
-    User MYUSERID
-    IdentityFile ~/.ssh/cloudbuilders/id_rsa
-    Port 29418
+      StrictHostKeyChecking no
+      UserKnownHostsFile=/dev/null
+
+    Host gerrit.eng.vmware.com
+        Hostname gerrit.eng.vmware.com
+        User MYUSERID
+        IdentityFile ~/.ssh/cloudbuilders/id_rsa
+        Port 29418
 
 
 Change the "MYUSERID" to your own gerrit userid
@@ -112,9 +99,9 @@ Once Gerrit access is working, you can pull the code base on to your
 development host:
 
 
-    mkdir workspace
-    cd workspace
-    repo init -u http://gerrit.cloudbuilders.vmware.local:8080/supervio -b master -g supervio
+    mkdir chaperone
+    cd chaperone
+    repo init -u https://github.com/vmware/chaperone -b master -g chaperone
     repo sync
 
 ### Setup the DE using any VM
@@ -135,12 +122,12 @@ For a setup with LXDE (X11) and the Geany editor:
 
 ### Setup the DE /etc/hosts with the CVM IP address
 
-For each Chaperone tool to be deployed, add an line in the DE /etc/hosts file
-with the following
+For each Chaperone tool to be deployed, you need a DNS resolvable address
+for chaperone servers. Where cannnot obtain one, just add an line in the
+DE /etc/hosts file with the following:
 
-    CDS_IP_ADDRESS supervio-ui.corp.local
-    CDS_IP_ADDRESS supersddc-ui.corp.local
-    CDS_IP_ADDRESS supercna-ui.corp.local
+
+    CDS_IP_ADDRESS chaperone-ui.corp.local chaperone-admin-ui.corp.local
 
 
 where CDS_IP_ADDRESS is the actual dotted quad address of the CDS.
@@ -150,77 +137,62 @@ If the CDS is exposed on a port other the 22, add the port to the inventory file
 in playbook project that will be built:
 
 
-Ex. :~/work/ansible/playbooks/supervio-ui/inventory becomes
+Ex. :~/chaperone/ansible/playbooks/chaperone-ui/inventory becomes
 
 
-    [supervio-ui]
-    supervio-ui.corp.local:8422
+    [chaperone-ui]
+    chaperone-ui.corp.local:8422
 
 #### Special Note about Domains:
 
 
-The default domain name for most things Chaperone is "vmware.local" for
+The default domain name for most things Chaperone is "corp.local" for
 development VMs or containers. However, at times (arguably often) work
 will occur on remote vCenter server environments, which generally use a
 other domain names (such as "corp.local").
 
-Given that note, take care to understand the actual domain name the DNS server
+Given that, take care to understand the actual domain name the DNS server
 you use uses in the event it is providing names, for example, as
-supervio-ui.corp.local.
+chaperone-ui.corp.local.
 
 
 There are variables in some of the playbooks, and inventory files, that
-require care and attention if the target environment's domain is
+require care and attention if the target environment has a domain
 different from the default.
 
 
 ## Deploy the CDS guis and tools
 
-To setup the Chaperone UI on the CDS, run one or more of the the
-
+To setup the Chaperone UI on the CDS, run one or more of the
 UI-generating playbooks from the DE. The playbooks install and configure the
 CDS automatically with commands similar to the following:
 
 
     # be on the DE as vmware
     # builds chaperone vio application
-    cd ~/workspace/ansible/playbooks/supervio-ui
+    cd ~/chaperone/ansible/playbooks/chaperone-ui
     # be sure to update the inventory and /etc/hosts files to
-    # the right network adress of the supervio-ui deploy
-    ansible-playbook --ask-pass --ask-sudo-pass -i inventory base.yml
-    ansible-playbook -i inventory ui.yml
-
-
-    # builds chaperone sddc application
-    cd ~/workspace/ansible/playbooks/supersddc-ui
-    # be sure to update the inventory and /etc/hosts files to
-    # the right network adress of the supersddc-ui deploy
-    ansible-playbook --ask-pass --ask-sudo-pass -i inventory base.yml
-    ansible-playbook -i inventory ui.yml
-
-
-    # builds chaperone cna application
-    cd ~/workspace/ansible/playbooks/supercna-ui
-    # be sure to update the inventory and /etc/hosts files to
-    # the right network adress of the supercna-ui deploy
-    ansible-playbook --ask-pass --ask-sudo-pass -i inventory base.yml
-    ansible-playbook -i inventory ui.yml
+    # the right network adress of the chaperone-ui deploy
+    ansible-playbook -i examples/inventory site.yml
 
 
 ## Configure and deploy
 
-Each Chaperone tool is accessed through a descriptive DNS name in the format
-"super(XXX)-ui.corp.local" where XXX is vio, sddc or cna to denote the package
-configuration tool. Entries for each tool deployed need to either be added to
-the /etc/hosts or in the dns table of the system running the browser that
-accesses the application.
+Chaperone is a tool that allows for creating a multitude of user interfaces
+by adding ansible templates. Each Chaperone tool is accessed through a
+descriptive DNS name in the format "(XXX)-ui.corp.local" where XXX might be
+something like "mycooltool", sddc or even somthing as simple as cna to denote
+the package configuration the tool you want to create and later deploy.
+Entries for each tool deployed need to either be added to the /etc/hosts or in
+the dns table of the system running the browser that accesses the application.
 
-Open a browser to http://super(XXX)-ui.corp.local, and you should see the gui.
-Fill in the gui with environment specific data, and 'save' will write the
-answerfile.yml.
+Open a browser to http://(XXX)-ui.corp.local and
+http://(XXX)-admin-ui.corp.local, thereafter you should see the guis.
+Fill in the forms with environment specific data, and 'Save' will store the
+answers in an answerfile.yml later used by the ansible playbooks..
 
 Alternatively, you can create an answerfile.yml by cutting and pasting the
-contents of a sample file into the answerfile.yml located at /var/lib/super(xxx)
+contents of a sample file into the answerfile.yml located at /var/lib/(XXX)
 on the Chaperone Deployment server.
 
 TODO: Link to sample answer files for each package tool

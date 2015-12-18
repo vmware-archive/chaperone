@@ -2,12 +2,12 @@ Chaperone Deployment Environment
 =====================
 Development and deployment require two VM's running [Ubuntu Linux 64-bit](http://www.ubuntu.com/download/server):
 
-- **Development Environment (DE)** is the environment where the source code is downloaded, modified and built.
-- **Chaperone Deployment Server (CDS)** is the build target for the development environment.
+- **Development Environment (DE)** is the environment into which you download, modify and commit code..
+- **Chaperone Deployment Server (CDS)** is the target into which the development environment deploys the code.
 
 The Chaperone Deployment server runs the applications used to configure a
-vCenter Server environment, so must have access to the environment which it
-will act on. This file describes deployment options for the Chaperone
+SDDC Server environment, so must have access to the environment against which
+it will act. This file describes deployment options for the Chaperone
 Deployment Server (CDS)
 
 ##External Deployment
@@ -23,9 +23,10 @@ This configuration requires that the vCenter server management port is exposed
 on an external ip that is accessible by the CDS server.
 
 ##Internal Deployment
-In some cases, such as in One Cloud vPods or on customer premises, the
-Chaperone Deployment Server needs to exist within the context of vCenter server,
-i.e. a VM deployed into an on-premises management vCenter instance. That
+In some cases, such as in cloud 'pods' or on production premises, the
+Chaperone Deployment Server needs to exist within the context of the
+infrastructure management server (e.g., vCenter server). In such cases, CDS
+can be a VM deployed into an on-premises management instance. That
 scenario would look similar to the following
 
 ![](CDSIntDeployment.png)
