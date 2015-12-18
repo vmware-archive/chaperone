@@ -21,7 +21,7 @@
            revision="master" />
 
   <!-- playbooks -->
-  <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="sdlc,playbooks,chaperone" remote="vmware"/>
+  <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="avm,sdlc,playbooks,chaperone" remote="vmware"/>
 
   <!-- build and source infrastructure -->
   <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="sdlc" remote="github" />
@@ -68,7 +68,7 @@
   </project>
 
   <!-- roles from vmware -->
-  <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="sdlc,roles,chaperone" remote="vmware"/>
+  <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="avm,sdlc,roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/assets" name="ansible-role-assets" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/autodeploy" name="ansible-role-autodeploy" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,chaperone" remote="vmware"/>
@@ -89,7 +89,7 @@
   <project path="ansible/roles/registrator" name="ansible-role-registrator" groups="sdlc,roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/repo" name="ansible-role-repo" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/sshkeys" name="ansible-role-sshkeys" groups="sdlc,roles,chaperone" remote="vmware"/>
-  <project path="ansible/roles/sudo" name="ansible-role-sudo" groups="sdlc,roles,chaperone" remote="vmware"/>
+  <project path="ansible/roles/sudo" name="ansible-role-sudo" groups="avm,sdlc,roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/chaperone" name="ansible-role-chaperone" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/vcenter" name="ansible-role-vcenter" groups="roles,chaperone" remote="vmware"/>
   <project path="ansible/roles/vcsa" name="ansible-role-vcsa" groups="roles,chaperone" remote="vmware"/>
@@ -147,22 +147,3 @@
 
   <!-- microservices -->
   <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="chaperone,docker,microservices" remote="vmware"/>
-
-  <!-- VMOS -->
-  <project path="vmos/brussell/cinder-havana" name="brussell/cinder-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/brussell/thermosite" name="brussell/thermosite.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/cinder-havana" name="nsbu-openstack/cinder-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/glance-havana" name="nsbu-openstack/glance-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/heat-havana" name="nsbu-openstack/heat-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/horizon-havana" name="nsbu-openstack/horizon-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/keystone-havana" name="nsbu-openstack/keystone-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/neutron-havana" name="nsbu-openstack/neutron-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/nova-havana" name="nsbu-openstack/nova-havana.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/python-keystoneclient" name="nsbu-openstack/python-keystoneclient.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/vmos" name="nsbu-openstack/vmos.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/vmos-prep" name="nsbu-openstack/vmos-prep.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/vmosautoconfig" name="nsbu-openstack/vmosautoconfig.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/nsbu-openstack/vmosautoprep" name="nsbu-openstack/vmosautoprep.git" groups="vmos" remote="vmos"/>
-  <project path="vmos/transforms/installer" name="transformers/installer.git" groups="vmos" remote="vmos"/>
-
-</manifest>
