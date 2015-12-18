@@ -147,3 +147,5 @@
 
   <!-- microservices -->
   <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="chaperone,docker,microservices" remote="vmware"/>
+
+</manifest>
