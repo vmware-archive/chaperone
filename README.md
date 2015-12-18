@@ -3,7 +3,7 @@ Chaperone
 Chaperone is an Automation toolkit rooted in DevOps principals for deploying
 and configuring a Software Defined Data Center (SDDC) based Hybrid Cloud
 Management platform. It is intended to expedite and standardize  "typical"
-deployments and configuration of VMware solutions including VSphere/vCenter,
+deployments and configuration of VMware solutions including vSphere/vCenter,
 NSX, VIO, vRA, vRO, vROps, vRLI, vRB and others as the toolkit grows.
 
 The project is a work in progress, and always will be such a facility as we
