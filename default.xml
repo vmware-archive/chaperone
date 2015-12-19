@@ -10,13 +10,8 @@
            fetch="https://github.com/vmware"
            review="gerrit.eng.vmware.com:8080" />
 
-  <!-- VMware general remote - internal until fully replicated -->
-  <remote  name="vmware"
-           fetch="http://gerrit.eng.vmware.com:8080"
-           review="gerrit.eng.vmware.com:8080" />
-
   <!-- Defaults for repo -->
-  <default remote="vmware"
+  <default remote="vmwareorg"
            sync-c="true"
            sync-j="4"
            revision="master" />
@@ -24,16 +19,13 @@
   <!-- playbooks -->
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="avm,sdlc,playbooks,chaperone" remote="vmwareorg"/>
 
-  <!-- build and source infrastructure -->
+  <!-- build and source infrastructure: TODO: some not yet replicating -->
   <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="sdlc" remote="github" />
-  <project path="ansible/roles/openldap" name="ansible-role-openldap" groups="sdlc" remote="vmware" />
-  <project path="ansible/roles/gerrit" name="ansible-role-gerrit" groups="sdlc" remote="vmware" />
-  <project path="ansible/roles/jenkins" name="ansible-role-jenkins" groups="sdlc" remote="vmware" />
-  <project path="ansible/roles/haproxy" name="ansible-role-haproxy" groups="sdlc" remote="vmware" />
-  <project path="ansible/roles/redmine" name="ansible-role-redmine" groups="sdlc" remote="vmware"/>
-
-  <!-- Chaperone -->
-  <project path="setup" name="chaperone-setup" groups="chaperone" remote="vmware" />
+  <!--project path="ansible/roles/openldap" name="ansible-role-openldap" groups="sdlc" remote="vmwareorg" /-->
+  <!--project path="ansible/roles/gerrit" name="ansible-role-gerrit" groups="sdlc" remote="vmwareorg" /-->
+  <project path="ansible/roles/jenkins" name="ansible-role-jenkins" groups="sdlc" remote="vmwareorg" />
+  <project path="ansible/roles/haproxy" name="ansible-role-haproxy" groups="sdlc" remote="vmwareorg" />
+  <!--project path="ansible/roles/redmine" name="ansible-role-redmine" groups="sdlc" remote="vmwareorg"/-->
 
   <!-- modules from vmware -->
   <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmwareorg">
@@ -69,8 +61,8 @@
     <copyfile src="library/xml" dest="ansible/library/xml" />
   </project>
 
-  <!-- roles from vmware -->
-  <project path="ansible/roles/assets" name="ansible-role-assets" groups="roles,chaperone" remote="vmware"/>
+  <!-- roles from vmware: TODO: not replicating yet, update ASAP -->
+  <!--project path="ansible/roles/assets" name="ansible-role-assets" groups="roles,chaperone" remote="vmwareorg"/-->
 
   <!-- roles from vmwareorg -->
   <project path="ansible/roles/ansible" name="ansible-role-ansible" groups="avm,sdlc,roles,chaperone" remote="vmwareorg"/>
@@ -113,8 +105,8 @@
   <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,chaperone" remote="github"/>
 
-  <!-- nsxansible role from github - the directory structure is for a playbook, we need to modify slightly -->
-  <project path="ansible/modules/nsx" name="vmware/nsxansible.git" groups="modules,chaperone" remote="github" >
+  <!-- nsxansible - the directory structure is for a playbook, we need to modify slightly -->
+  <project path="ansible/modules/nsx" name="nsxansible.git" groups="modules,chaperone" remote="vmwareorg" >
     <copyfile src="library/__init__.py" dest="ansible/library/__init__.py" />
     <copyfile src="library/nsx_cluster_prep.py" dest="ansible/library/nsx_cluster_prep.py" />
     <copyfile src="library/nsx_controllers.py" dest="ansible/library/nsx_controllers.py" />
@@ -132,23 +124,25 @@
     <copyfile src="roles/deploy-nsx-ova/tasks/main.yml" dest="ansible/roles/nsx/tasks/deploy-nsx-ova.yml" />
   </project>
 
-  <project path="ansible/roles/nsx/files" name="vmware/nsxraml.git" groups="modules,chaperone" remote="github" >
+  <project path="ansible/roles/nsx/files" name="nsxraml.git" groups="modules,chaperone" remote="vmwareorg" >
   </project>
 
-  <!-- container image projects -->
-  <project path="containers/docker/chaperone" name="containers/docker-chaperone" groups="chaperone,docker,sdlc" remote="vmware"/>
-  <project path="containers/docker/collectd" name="containers/docker-collectd" groups="chaperone,docker" remote="vmware"/>
-  <project path="containers/docker/elasticsearch" name="containers/docker-elasticsearch" groups="chaperone,docker" remote="vmware"/>
-  <project path="containers/docker/graphite-api" name="containers/docker-graphite-api" groups="chaperone,docker" remote="vmware"/>
-  <project path="containers/docker/jenkins" name="containers/docker-jenkins" groups="chaperone,docker,sdlc" remote="vmware"/>
-  <project path="containers/docker/kibana" name="containers/docker-kibana" groups="chaperone,docker" remote="vmware"/>
-  <project path="containers/docker/logstash-server" name="containers/docker-logstash-server" groups="chaperone,docker" remote="vmware"/>
-  <project path="containers/docker/vrpt" name="containers/docker-vrpt" groups="chaperone,docker,sdlc" remote="vmware"/>
+  <!-- container image projects: TODO: not replicating yet -->
+  <!--
+  <project path="containers/docker/chaperone" name="containers/docker-chaperone" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
+  <project path="containers/docker/collectd" name="containers/docker-collectd" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/elasticsearch" name="containers/docker-elasticsearch" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/graphite-api" name="containers/docker-graphite-api" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/jenkins" name="containers/docker-jenkins" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
+  <project path="containers/docker/kibana" name="containers/docker-kibana" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/logstash-server" name="containers/docker-logstash-server" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/vrpt" name="containers/docker-vrpt" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
+  -->
 
   <!-- user interface (django) -->
-  <project path="ui" name="chaperone-ui" groups="chaperone" remote="vmware"/>
+  <project path="ui" name="chaperone-ui" groups="chaperone" remote="vmwareorg"/>
 
-  <!-- microservices -->
-  <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="chaperone,docker,microservices" remote="vmware"/>
+  <!-- microservices examples: TODL: not remplicating yet -->
+  <!--project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="chaperone,docker,microservices" remote="vmwareorg"/-->
 
 </manifest>
