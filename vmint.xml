@@ -6,7 +6,7 @@
            fetch="https://github.com" />
 
   <!-- Github vmware Organization -->
-  <remote  name="vmware"
+  <remote  name="vmwareorg"
            fetch="https://github.com/vmware"
            review="gerrit.eng.vmware.com:8080" />
 
