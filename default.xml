@@ -123,7 +123,7 @@
 
   <!-- container image projects: TODO: not replicating yet -->
   <project path="containers/docker/chaperone" name="docker-chaperone" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
-  <project path="containers/docker/collectd" name="docker-collected" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/collectd" name="docker-collectd" groups="chaperone,docker" remote="vmwareorg"/>
   <project path="containers/docker/elasticsearch" name="docker-elasticsearch" groups="chaperone,docker" remote="vmwareorg"/>
   <project path="containers/docker/graphite-api" name="docker-graphite-api" groups="chaperone,docker" remote="vmwareorg"/>
   <project path="containers/docker/jenkins" name="docker-jenkins" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
