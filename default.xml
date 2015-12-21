@@ -122,14 +122,14 @@
   </project>
 
   <!-- container image projects: TODO: not replicating yet -->
-  <project path="containers/docker/chaperone" name="containers/docker-chaperone" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
-  <project path="containers/docker/collectd" name="containers/docker-collectd" groups="chaperone,docker" remote="vmwareorg"/>
-  <project path="containers/docker/elasticsearch" name="containers/docker-elasticsearch" groups="chaperone,docker" remote="vmwareorg"/>
-  <project path="containers/docker/graphite-api" name="containers/docker-graphite-api" groups="chaperone,docker" remote="vmwareorg"/>
-  <project path="containers/docker/jenkins" name="containers/docker-jenkins" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
-  <project path="containers/docker/kibana" name="containers/docker-kibana" groups="chaperone,docker" remote="vmwareorg"/>
-  <project path="containers/docker/logstash-server" name="containers/docker-logstash-server" groups="chaperone,docker" remote="vmwareorg"/>
-  <project path="containers/docker/vrpt" name="containers/docker-vrpt" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
+  <project path="containers/docker/chaperone" name="docker-chaperone" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
+  <project path="containers/docker/collectd" name="docker-collected" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/elasticsearch" name="docker-elasticsearch" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/graphite-api" name="docker-graphite-api" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/jenkins" name="docker-jenkins" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
+  <project path="containers/docker/kibana" name="docker-kibana" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/logstash-server" name="docker-logstash-server" groups="chaperone,docker" remote="vmwareorg"/>
+  <project path="containers/docker/vrpt" name="docker-vrpt" groups="chaperone,docker,sdlc" remote="vmwareorg"/>
 
   <!-- user interface (django) -->
   <project path="ui" name="chaperone-ui" groups="chaperone" remote="vmwareorg"/>
