@@ -11,7 +11,7 @@ add new functionalities and products to the Chaperone base.
 
 The toolkit consists of web based interfaces and (generally) Ansible code called
 bu the web interfaces. The plays are used to configure and deploy standard one of
-several standard platforms. There are to interfaces with which users of Chaperone
+several standard platforms. There are two interfaces with which users of Chaperone
 interact:
 
 - chaperone-admin-ui (e.g., 'http://chaperone-admin-ui.corp.local')
