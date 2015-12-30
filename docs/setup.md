@@ -123,9 +123,9 @@ ansible-playbook --ask-sudo-pass -i inventory ansible-lxde.yml
 
 ### Setup the DE /etc/hosts with the CVM IP address
 
-For each Chaperone tool to be deployed, you need a DNS resolvable address
-for chaperone servers. Where cannnot obtain one, just add an line in the
-DE /etc/hosts file with the following:
+For each Chaperone tool to be deployed, you need a DNS resolvable address for
+chaperone servers. In case you cannot obtain one, just add an line in the
+/etc/hosts file within the DE server with the following:
 
 ```
 CDS_IP_ADDRESS chaperone-ui.corp.local chaperone-admin-ui.corp.local
@@ -141,8 +141,8 @@ development VMs or containers. However, at times (arguably often) work
 will occur on remote vCenter server environments, which generally use a
 other domain names (such as "corp.local").
 
-Given that, take care to understand the actual domain name the DNS server
-you use uses in the event it is providing names, for example, as
+Given that, take care to understand the actual domain names your DNS server
+serves in the event it is providing local domains, for example,
 chaperone-ui.corp.local.
 
 ### Assure Ansible Inventory file correctness:
@@ -165,7 +165,7 @@ cp examples/inventory .
 ```
 
 You can then modify the copied inventory for your local modifications. There
-is a .gitignore file in place that will ignore you changes when committing
+is a .gitignore file in place that will ignore your changes when committing
 code, so you need not worry about others getting affected by your changes.
 
 An example for modifying the inventory file might be where your CDS is exposed
@@ -221,7 +221,7 @@ Entries for each tool deployed need to either be added to the /etc/hosts or in
 the dns table of the system running the browser that accesses the application.
 
 Open a browser to http://(XXX)-ui.corp.local and
-http://(XXX)-admin-ui.corp.local, thereafter you should see the guis.
+http://(XXX)-admin-ui.corp.local, thereafter you should see the Web UIs.
 Fill in the forms with environment specific data, and 'Save' will store the
 answers in an answerfile.yml later used by the ansible playbooks..
 

@@ -75,19 +75,19 @@ before you submit a [Pull Request](https://help.github.com/articles/creating-a-p
 for review and potential merge into the code base.
 
 ###Getting the code
-[Instructions to download](docs/setup.md), install and deploy the Chaperone UI
+[Instructions](docs/setup.md) to download, install and deploy the Chaperone UI
 tools and underlying Ansible plays, Python modules and other required code
-bases are [here](docs/setup.md)
+bases are [here](docs/setup.md).
 
 ###Running Chaperone
 [Information on initial environments and running](docs/run.md) the Chaperone tools against
-an appropriate SDDC environment are [here](docs/run.md)
+an appropriate SDDC environment are [here](docs/run.md).
 
 ###Structure and Standards
-*TODO* - coming soon . . .
+*TODO* - coming soon in our github.io page.
 
 ###Development Workflow
-*TODO* - coming soon. . .
+*TODO* - coming soon in our github.io page.
 
 # License and Copyright
  
