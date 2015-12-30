@@ -104,7 +104,7 @@
   <project path="ansible/roles/vrpt" name="ansible-role-vrpt" groups="roles,chaperone" remote="vmware"/>
 
   <!-- roles from github -->
-  <project path="ansible/roles/apache" name="tomhite/ansible-role-apache.git" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/apache" name="tompscanlan/ansible-role-apache.git" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/collectd" name="tomhite/ansible-role-collectd" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/consul" name="tomhite/ansible-role-consul" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
