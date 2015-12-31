@@ -10,7 +10,7 @@ The project is a work in progress, and always will be such a facility as we
 add new functionalities and products to the Chaperone base.
 
 The toolkit consists of web based interfaces and (generally) Ansible code called
-bu the web interfaces. The plays are used to configure and deploy standard one of
+by the web interfaces. The plays are used to configure and deploy one of
 several standard platforms. There are two interfaces with which users of Chaperone
 interact:
 
