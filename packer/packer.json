@@ -1,0 +1,215 @@
+{
+  "variables": {
+    "atlas_token": "{{env `ATLAS_TOKEN`}}",
+    "version": "0.2.{{env `ATLAS_BUILD_NUMBER`}}",
+    "role": "chaperone",
+    "org": "tompscanlan",
+    "memory": "512",
+    "cpu": "1",
+    "headless": "true",
+    "disk_size": "20000",
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ubuntu_iso_url": "http://releases.ubuntu.com/trusty/ubuntu-14.04.3-server-amd64.iso",
+    "ubuntu_iso_checksum": "9e5fecc94b3925bededed0fdca1bd417",
+    "ubuntu_iso_checksum_type": "md5",
+    "docker_repo_username": "{{env `docker_repo_username`}}",
+    "docker_repo_password": "{{env `docker_repo_password`}}",
+    "docker_repo_server": "{{env `docker_repo_server`}}",
+    "docker_repo_email": "{{env `docker_repo_email`}}"
+  },
+  "builders": [
+    {
+      "name": "ubuntu-docker",
+      "type": "docker",
+      "image": "ubuntu",
+      "commit": true
+    },
+    {
+      "name": "ubuntu-virtualbox",
+      "type": "virtualbox-iso",
+      "output_directory": "base-virtualbox",
+      "vm_name": "packer-virtualbox-iso",
+      "boot_command": [
+        "<esc><esc><enter><wait>",
+        "/install/vmlinuz noapic preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg <wait>",
+        "debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
+        "hostname={{ .Name }} <wait>",
+        "fb=false debconf/frontend=noninteractive <wait>",
+        "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA keyboard-configuration/variant=USA console-setup/ask_detect=false <wait>",
+        "initrd=/install/initrd.gz -- <enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "guest_os_type": "Ubuntu_64",
+      "http_directory": "packer",
+      "iso_checksum": "{{user `ubuntu_iso_checksum`}}",
+      "iso_checksum_type": "{{user `ubuntu_iso_checksum_type`}}",
+      "iso_url": "{{user `ubuntu_iso_url`}}",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_password": "{{user `ssh_password`}}",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
+      "headless": "{{user `headless`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "virtualbox_version_file": ".vbox_version",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "{{user `memory`}}"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "{{user `cpu`}}"
+        ]
+      ]
+    },
+    {
+      "name": "ubuntu-vmware",
+      "type": "vmware-iso",
+      "output_directory": "base-vmware",
+      "boot_command": [
+        "<esc><esc><enter><wait>",
+        "/install/vmlinuz noapic preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg <wait>",
+        "debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
+        "hostname={{ .Name }} <wait>",
+        "fb=false debconf/frontend=noninteractive <wait>",
+        "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA keyboard-configuration/variant=USA console-setup/ask_detect=false <wait>",
+        "initrd=/install/initrd.gz -- <enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "guest_os_type": "ubuntu-64",
+      "http_directory": "packer",
+      "iso_checksum": "{{user `ubuntu_iso_checksum`}}",
+      "iso_checksum_type": "{{user `ubuntu_iso_checksum_type`}}",
+      "iso_url": "{{user `ubuntu_iso_url`}}",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_password": "{{user `ssh_password`}}",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
+      "tools_upload_flavor": "linux",
+      "tools_upload_path": "{{.Flavor}}.iso",
+      "headless": "{{user `headless`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "vmx_data": {
+        "cpuid.coresPerSocket": "1",
+        "memsize": "{{user `memory`}}",
+        "numvcpus": "{{user `cpu`}}",
+        "mks.3denable": false
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "ls -al ~/"
+      ]
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "packer/setup.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "{{user `org`}}/{{user `role`}}-ubuntu",
+        "tag": "{{user `version`}}",
+        "force": true,
+        "only": [
+          "ubuntu-docker"
+        ]
+      },
+      {
+        "type": "docker-push",
+        "login": true,
+        "login_email": "{{user `docker_repo_email`}}",
+        "login_username": "{{user `docker_repo_username`}}",
+        "login_password": "{{user `docker_repo_password`}}",
+        "login_server": "{{user `docker_repo_server`}}",
+        "only": [
+          "ubuntu-docker"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "docker-tag",
+        "repository": "{{user `org`}}/{{user `role`}}-ubuntu",
+        "tag": "latest",
+        "force": true,
+        "only": [
+          "ubuntu-docker"
+        ]
+      },
+      {
+        "type": "docker-push",
+        "login": true,
+        "login_email": "{{user `docker_repo_email`}}",
+        "login_username": "{{user `docker_repo_username`}}",
+        "login_password": "{{user `docker_repo_password`}}",
+        "login_server": "{{user `docker_repo_server`}}",
+        "only": [
+          "ubuntu-docker"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "vagrant",
+        "keep_input_artifact": false,
+        "except": [
+          "ubuntu-docker"
+        ]
+      },
+      {
+        "type": "atlas",
+        "only": [
+          "ubuntu-vmware"
+        ],
+        "artifact": "{{user `org`}}/{{user `role`}}-ubuntu",
+        "artifact_type": "vagrant.box",
+        "metadata": {
+          "created_at": "{{timestamp}}",
+          "provider": "vmware_desktop",
+          "version": "{{user `version`}}"
+        }
+      },
+      {
+        "type": "atlas",
+        "only": [
+          "ubuntu-virtualbox"
+        ],
+        "artifact": "{{user `org`}}/{{user `role`}}-ubuntu",
+        "artifact_type": "vagrant.box",
+        "metadata": {
+          "created_at": "{{timestamp}}",
+          "provider": "virtualbox",
+          "version": "{{user `version`}}"
+        }
+      }
+    ]
+  ],
+  "push": {
+    "name": "{{user `org`}}/{{user `role`}}",
+    "base_dir": "../",
+    "exclude": [
+      ".git",
+      "packer_cache/*",
+      ".kitchen/*",
+      ".vagrant/*",
+      "chaperone",
+      ".repo/*",
+      "*.box"
+    ]
+  }
+}
