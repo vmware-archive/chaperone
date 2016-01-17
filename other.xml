@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Github remote -->
+  <remote  name="github"
+           fetch="https://github.com" />
+
+  <!-- python modules -->
+  <project path="ansible/modules/vsphere" name="ViaSat/ansible-vsphere.git" groups="modules,chaperone" remote="github">
+    <copyfile src="vsphere" dest="ansible/library/vsphere" />
+  </project>
+
+  <project path="ansible/modules/xml" name="tomhite/ansible-xml" groups="modules,chaperone" remote="github" >
+    <copyfile src="library/xml" dest="ansible/library/xml" />
+  </project>
+
+  <!-- roles -->
+  <project path="ansible/roles/apache" name="tomhite/ansible-role-apache.git" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/collectd" name="tomhite/ansible-role-collectd" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/consul" name="tomhite/ansible-role-consul" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
+  <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,chaperone" remote="github"/>
+
+</manifest>

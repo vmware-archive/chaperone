@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Note: github remote defined in other.xml -->
+
+  <!-- additional build and source infrastructure -->
+  <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="sdlc" remote="github" revision="master"/>
+</manifest>
