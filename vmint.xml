@@ -22,7 +22,9 @@
            revision="master" />
 
   <!-- playbooks -->
-  <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="avm,sdlc,playbooks,chaperone" remote="vmware"/>
+  <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="avm,sdlc,playbooks,chaperone" remote="vmwareorg">
+    <copyfile src="chaperone/examples/inventory" dest="ansible/playbooks/chaperone/inventory" />
+  </project>
 
   <!-- build and source infrastructure -->
   <project path="ansible/roles/postfix" name="petemcw/ansible-role-postfix.git" groups="sdlc" remote="github" />

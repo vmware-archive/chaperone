@@ -17,7 +17,9 @@
            revision="master" />
 
   <!-- playbooks -->
-  <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="avm,sdlc,playbooks,chaperone" remote="vmwareorg"/>
+  <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="avm,sdlc,playbooks,chaperone" remote="vmwareorg">
+    <copyfile src="chaperone/examples/inventory" dest="ansible/playbooks/chaperone/inventory" />
+  </project>
 
   <!-- build and source infrastructure: TODO: some not yet replicating -->
   <project path="ansible/roles/jenkins" name="ansible-role-jenkins" groups="sdlc" remote="vmwareorg" />
