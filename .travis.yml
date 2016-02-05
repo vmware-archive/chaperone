@@ -1,0 +1,34 @@
+---
+language: python
+python: "2.7"
+
+addons:
+  apt:
+    packages:
+      - curl
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - curl
+
+sudo: required
+
+before_install:
+  - pwd
+  - curl https://storage.googleapis.com/git-repo-downloads/repo > /tmp/repo
+  - sudo mv /tmp/repo /bin/repo
+  - sudo chmod a+x /bin/repo
+
+install:
+  - pip install ansible
+
+script:
+  - "[ -d /opt/chaperone ] || sudo mkdir -p /opt/chaperone"
+  - cd /tmp
+  - git config --global user.email "you@example.com"
+  - git config --global user.name "Your Name"
+  - echo "y" | repo init -u https://github.com/vmware/chaperone -b master -g chaperone
+  - repo sync
