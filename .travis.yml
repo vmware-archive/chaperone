@@ -24,6 +24,7 @@ before_install:
 
 install:
   - pip install ansible
+  - pip install ansible-lint
 
 script:
   - "[ -d /opt/chaperone ] || sudo mkdir -p /opt/chaperone"
