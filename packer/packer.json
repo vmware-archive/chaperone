@@ -1,5 +1,6 @@
 {
   "variables": {
+
     "atlas_token": "{{env `ATLAS_TOKEN`}}",
     "version": "0.2.{{env `ATLAS_BUILD_NUMBER`}}",
     "role": "chaperone",
