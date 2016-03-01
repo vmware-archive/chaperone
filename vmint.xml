@@ -17,6 +17,9 @@
   <!-- Chaperone Setup (deprecated documentation in reality) -->
   <project path="setup" name="chaperone-setup" groups="chaperone" remote="vmware" revision="master"/>
 
+  <!-- NFV roles -->
+  <project path="ansible/roles/vcloud-nfv-ra" name="ansible-role-vcloud-nfv-ra" groups="roles,chaperone" remote="vmware"/>
+
   <!-- microservices -->
   <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="chaperone,docker,microservices" remote="vmware" revision="master"/>
 
