@@ -21,12 +21,7 @@
   <!-- python modules -->
   <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
-    <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
-    <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
-    <copyfile src="vcenter_add_nfs_ds.py" dest="ansible/library/vcenter_add_nfs_ds.py" />
-    <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
-    <copyfile src="vcenter_config_host_vds_only.py" dest="ansible/library/vcenter_config_host_vds_only.py" />
     <copyfile src="does_vm_exist.py" dest="ansible/library/does_vm_exist.py" />
     <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py"/>
     <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
