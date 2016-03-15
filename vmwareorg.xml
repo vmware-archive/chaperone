@@ -25,11 +25,8 @@
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
     <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
     <copyfile src="vcenter_add_nfs_ds.py" dest="ansible/library/vcenter_add_nfs_ds.py" />
-    <copyfile src="vcenter_addhost.py" dest="ansible/library/vcenter_addhost.py" />
     <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
-    <copyfile src="vcenter_cluster.py" dest="ansible/library/vcenter_cluster.py" />
     <copyfile src="vcenter_config_host_vds_only.py" dest="ansible/library/vcenter_config_host_vds_only.py" />
-    <copyfile src="vcenter_datacenter.py" dest="ansible/library/vcenter_datacenter.py" />
     <copyfile src="does_vm_exist.py" dest="ansible/library/does_vm_exist.py" />
     <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py"/>
     <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
