@@ -19,6 +19,7 @@
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="playbooks,sdlc,chaperone" remote="vmwareorg"/>
 
   <!-- python modules -->
+  <project path="ansible/modules/extras/gpl3" name="ansible-modules-extra-gpl3" groups="modules,chaperone" remote="vmwareorg"/>
   <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
