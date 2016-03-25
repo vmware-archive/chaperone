@@ -6,6 +6,11 @@
            fetch="https://github.com/vmware"
            review="gerrit.eng.vmware.com:8080" />
 
+  <!-- Temporary declaration of internal location -->
+  <remote  name="vmware"
+           fetch="http://gerrit.eng.vmware.com:8080"
+           review="gerrit.eng.vmware.com:8080" />
+
   <!-- Defaults for repo -->
   <default remote="vmwareorg"
            sync-c="true"
