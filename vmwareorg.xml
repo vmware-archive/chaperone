@@ -6,11 +6,6 @@
            fetch="https://github.com/vmware"
            review="gerrit.eng.vmware.com:8080" />
 
-  <!-- Temporary declaration of internal location -->
-  <remote  name="vmware"
-           fetch="http://gerrit.eng.vmware.com:8080"
-           review="gerrit.eng.vmware.com:8080" />
-
   <!-- Defaults for repo -->
   <default remote="vmwareorg"
            sync-c="true"
@@ -24,7 +19,7 @@
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="playbooks,sdlc,chaperone" remote="vmwareorg"/>
 
   <!-- python modules -->
-  <project path="ansible/modules/extras/gpl3" name="ansible-modules-extra-gpl3" groups="modules,chaperone" remote="vmware">
+  <project path="ansible/modules/extras-gpl3" name="ansible-modules-extras-gpl3" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
     <copyfile src="vcenter_add_nfs_ds.py" dest="ansible/library/vcenter_add_nfs_ds.py" />
