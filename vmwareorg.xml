@@ -38,11 +38,6 @@
     <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
     <copyfile src="configure_vra_sso.py" dest="ansible/library/configure_vra_sso.py"/>
     <copyfile src="configure_vra_appliance_mod.py" dest="ansible/library/configure_vra_appliance_mod.py"/>
-
-    <!-- win_file module had a bug and was left out of ansible 1.9.1.  pull in the fixed version until
-         ansible release has a working version.  Remove at will after that. -->
-    <copyfile src="win_file.ps1" dest="ansible/library/win_file.ps1" />
-    <copyfile src="win_file.py" dest="ansible/library/win_file.py" />
   </project>
 
    <!-- nsxansible - the directory structure is for a playbook, we need to modify slightly -->
