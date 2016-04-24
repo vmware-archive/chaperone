@@ -83,6 +83,9 @@ Change the "MYUSERID" to your own gerrit userid
 Using ssh-keygen from the ~/.ssh directory add a key for gerrit to ~/.ssh/cloudbuilders/
 and register the resulting id_rsa.pub key with Gerrit.
 
+Note: Be aware that the ansible playbooks that setup the DE will
+create ssh keys and place them in the default location (~/.ssh/id_rsa) for the vmware user.
+
 ### Install Ansible
 Run these commands on the development environment server.
 
