@@ -33,7 +33,7 @@ The following are under active development, but are considered fairly complete:
 - Chaperone for CMP (Hybrid Cloud Management Platform)
 
 ###Setup and Run Chaperone
-There are more documents for [setting up](docks/setup.md) and [running](docs/run.md) the Chaperone tools against an appropriate SDDC environment.
+There are more documents for [setting up](docs/setup.md) and [running](docs/run.md) the Chaperone tools against an appropriate SDDC environment.
 
 ###User Interfaces
 There are two interfaces with which users of Chaperone
