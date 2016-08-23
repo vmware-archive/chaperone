@@ -35,6 +35,7 @@
     <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
     <copyfile src="vcenter_vmkmigration.py" dest="ansible/library/vcenter_vmkmigration.py" />
     <copyfile src="vcenter_vmmigration.py" dest="ansible/library/vcenter_vmmigration.py" />
+    <copyfile src="add_nfs_datastore.py" dest="ansible/library/add_nfs_datastore.py" />
   </project>
 
   <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmwareorg">
