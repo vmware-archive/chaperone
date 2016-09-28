@@ -20,6 +20,9 @@
   <!-- NFV roles -->
   <project path="ansible/roles/vcloud-nfv-ra" name="ansible-role-vcloud-nfv-ra" groups="roles,chaperone" remote="vmware"/>
 
+  <!-- Photon Controller roles -->
+  <project path="ansible/roles/photon-controller" name="ansible-role-photon-controller" groups="roles,chaperone" remote="vmware"/>
+
   <!-- microservices -->
   <project path="src/github.com/tdhite/go-reminders" name="go-reminders" groups="chaperone,docker,microservices" remote="vmware" revision="master"/>
 
