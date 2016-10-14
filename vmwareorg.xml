@@ -26,16 +26,16 @@
     <copyfile src="vcenter_addhost.py" dest="ansible/library/vcenter_addhost.py" />
     <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
     <copyfile src="vcenter_cluster.py" dest="ansible/library/vcenter_cluster.py" />
-    <!--  Commenting this module out, not sure if it was purposely removed -->
-    <!-- <copyfile src="vcenter_config_host_vds_only.py" dest="ansible/library/vcenter_config_host_vds_only.py" /> -->
     <copyfile src="vcenter_datacenter.py" dest="ansible/library/vcenter_datacenter.py" />
+    <copyfile src="vcenter_config_host_vds_only.py" dest="ansible/library/vcenter_config_host_vds_only.py" />
+    <copyfile src="add_nfs_datastore.py" dest="ansible/library/add_nfs_datastore.py" />
+    <copyfile src="vcenter_vmkmigration.py" dest="ansible/library/vcenter_vmkmigration.py" />
+    <copyfile src="vcenter_vmmigration.py" dest="ansible/library/vcenter_vmmigration.py" />
   </project>
 
   <!--VM Migration from std swith to dixtribute switch, assign vmkernel adapter -->
   <project path="ansible/modules/vcsa" name="ansible-role-vcsa" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
-    <copyfile src="vcenter_vmkmigration.py" dest="ansible/library/vcenter_vmkmigration.py" />
-    <copyfile src="vcenter_vmmigration.py" dest="ansible/library/vcenter_vmmigration.py" />
     <copyfile src="add_nfs_datastore.py" dest="ansible/library/add_nfs_datastore.py" />
   </project>
 
