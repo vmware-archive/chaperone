@@ -1,5 +1,7 @@
 Chaperone
 =========
+[![Build Status](https://travis-ci.org/vmware/chaperone.svg?branch=master)](https://travis-ci.org/vmware/chaperone)
+
 Chaperone is an Automation toolkit rooted in DevOps principals for deploying
 and configuring a Software Defined Data Center (SDDC) based Hybrid Cloud
 Management platform. It is intended to expedite and standardize  "typical"

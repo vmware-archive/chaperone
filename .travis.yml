@@ -18,18 +18,20 @@ sudo: required
 
 before_install:
   - pwd
+  - "sudo apt-get -y install lsb_release || true"
   - curl https://storage.googleapis.com/git-repo-downloads/repo > /tmp/repo
+  - chmod a+x /tmp/repo
   - sudo mv /tmp/repo /bin/repo
-  - sudo chmod a+x /bin/repo
-
-install:
-  - pip install ansible
-  - pip install ansible-lint
-
-script:
-  - "[ -d /opt/chaperone ] || sudo mkdir -p /opt/chaperone"
-  - cd /tmp
   - git config --global user.email "you@example.com"
   - git config --global user.name "Your Name"
-  - echo "y" | repo init -u https://github.com/vmware/chaperone -b master -g chaperone
+  - "[ -d /opt/chaperone ] || sudo mkdir -p /opt/chaperone"
+
+install:
+  - pip install ansible ansible-lint
+
+script:
+  - cd /tmp
+  - echo "y" | repo init -u https://github.com/$TRAVIS_REPO_SLUG -b $TRAVIS_BRANCH -g chaperone
   - repo sync
+  - cd ansible/playbooks/ansible
+  - ansible-playbook -i inventory ansible.yml
