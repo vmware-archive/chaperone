@@ -17,6 +17,7 @@ addons:
 sudo: required
 
 before_install:
+  - env
   - pwd
   - curl https://storage.googleapis.com/git-repo-downloads/repo > /tmp/repo
   - sudo mv /tmp/repo /bin/repo
@@ -31,5 +32,9 @@ script:
   - cd /tmp
   - git config --global user.email "you@example.com"
   - git config --global user.name "Your Name"
-  - echo "y" | repo init -u https://github.com/vmware/chaperone -b master -g chaperone
+  - echo "y" | repo init -u https://github.com/$TRAVIS_REPO_SLUG -b master -g chaperone
   - repo sync
+  - cd ansible/playbooks/ansible
+  - ls
+  - cd ../chaperone
+  - ls
