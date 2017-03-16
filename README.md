@@ -14,7 +14,39 @@ add new functionality and products to the Chaperone base.
 
 ## Chaperone Overview
 
-The Chaperone toolkit consists of
+
+### Current Standard Configurations Supported
+
+The ansible playbooks are used to configure and deploy several standard platforms.
+The following are under active development, but are considered fairly complete:
+
+- Chaperone for VIO (Open Stack Integration)
+- Chaperone for CNA (Cloud Native Application Platform)
+- Chaperone for CMP (Hybrid Cloud Management Platform)
+
+#### Experimental Configurations
+
+The following are under active development
+- Chaperone for NSX
+- Chaperone for VxRails
+- Chaperone for kubernetes
+- Chaperone for IOT platforms
+
+### Setup and Run Chaperone
+
+There are guides for [setting up](docs/setup.md) and [running](docs/run.md)
+the Chaperone tools against an appropriate SDDC environment.
+
+### Development
+
+Read the [developer guide](docs/developer.md) if you are interested in the
+development process of Chaperone
+
+### Chaperone Sub-components
+
+Chaperone is built from lots of smaller pieces with a glue of UI and Ansible Playbooks.
+The following are most of the sub-projects:
+
 - [web based interfaces](https://github.com/vmware/chaperone-ui) for configuring and triggering the deployment of VMware solutions
 - [Ansible playbooks](https://github.com/vmware/ansible-playbooks-chaperone) called by the web interface to combine sets of roles into useful groupings of features
 - Ansible roles and modules supporting deployment of those solutions (list generated from [the repo manifest](vmwareorg.xml))
@@ -67,32 +99,6 @@ The Chaperone toolkit consists of
   - External ansible roles.  For list, see the "other" [manifest](other.xml)
   - [docker-chaperone](https://github.com/vmware/docker-chaperone)
 
-### Current Standard Configurations Supported
-
-The ansible playbooks are used to configure and deploy several standard platforms.
-The following are under active development, but are considered fairly complete:
-
-- Chaperone for VIO (Open Stack Integration)
-- Chaperone for CNA (Cloud Native Application Platform)
-- Chaperone for CMP (Hybrid Cloud Management Platform)
-
-#### Experimental Configurations
-
-The following are under active development
-- Chaperone for NSX
-- Chaperone for VxRails
-- Chaperone for kubernetes
-- Chaperone for IOT platforms
-
-### Setup and Run Chaperone
-
-There are guides for [setting up](docs/setup.md) and [running](docs/run.md)
-the Chaperone tools against an appropriate SDDC environment.
-
-### Development
-
-Read the [developer guide](docs/developer.md) if you are interested in the
-development process of Chaperone
 
 ## License and Copyright
 
