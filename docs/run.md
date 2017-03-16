@@ -12,7 +12,7 @@ With the 'taint' noted above, once one or more of the Chaperone package tools
 has been [deployed](setup.md) to a Chaperone Deployment Server, a vCenter
 Server environment will be needed for the Chaperone tool to configure.
 
-##Setting up a management environment: vCenter Servers
+## Setting up a management environment: vCenter Servers
 When dealing with a SDDC utilizing VMware products, Chaperone requires some
 initial setup in a vCenter server environment. While the state of the setup may
 vary, for a development environment the typical configuration is:
@@ -28,7 +28,7 @@ server environment. In some instances when later stage playbooks are to be
 developed, it may be more efficient to use a vCenter developer environment that
 is more fully configured.
 
-###Connectivity for Chaperone-UI
+### Connectivity for Chaperone-UI
 For a development environment, there are two deployment configurations (see [Environments](env.md)).
 
 If the Chaperone Deployment Server is external to the vCenter Server
@@ -41,7 +41,7 @@ primary name server, thus would know any local domains (e.g., corp.local).
 If the CDS is deployed within the vCenter Server environment, a SSH port for
 the Chaperone Deployment Server must also be exposed through the router.
 
-###Running Chaperone
+### Running Chaperone
 The Chaperone UI exposes (via a left-hand side menuing system) Prepare and
 Install sections. The Prepare section presents forms that accept configurations
 to be used in configuring the Data Center. This may be populated manually, or

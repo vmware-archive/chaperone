@@ -7,7 +7,7 @@ Development and deployment of Chaperone tools require two VMs based on a
 - **Development Environment (DE)** is the environment where the source code is downloaded, modified and built.
 - **Chaperone Deployment Server (CDS)** is the build target for the development environment.
 
-###Note on Environments
+### Note on Environments
 To simply build and deploy the Chaperone GUI(s), any Ubuntu 64-bit
 instance is sufficient. However, in order to run the Chaperone and to set
 up the vCenter environment, the CDS must have access to, or be installed
@@ -20,10 +20,10 @@ Getting Started
 
 ## Setting up the Chaperone Deployment Server
 
-###Assumptions
+### Assumptions
 - User has downloaded and installed a Ubuntu Linux 64-bit server to a VM.
 
-###Install a vmware user
+### Install a vmware user
     sudo adduser vmware
     sudo adduser vmware sudo
 
@@ -41,11 +41,11 @@ CDS will need to be exposed through an external ip. See [Environments](env.md)
 
 ## Setting up the Development Environment
 
-###Assumptions
+### Assumptions
 - User has an account on the Chaperone gerrit project
 - User has downloaded and installed a Ubuntu Linux 64-bit server.
 
-###Install a vmware user
+### Install a vmware user
     sudo adduser vmware
     sudo adduser vmware sudo
 
