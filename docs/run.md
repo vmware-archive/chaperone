@@ -67,3 +67,41 @@ to a particular scenario is both encouraged and well supported given the
 entirety of the Prepare and Install menus are defined by YAML files. The
 project that implements the web interfaces and thus interprets and renders the
 YAML markup is [chaperone-ui](https://github.com/vmware/chaperone-ui.git).
+
+
+### Web Based User Interfaces
+
+There are two interfaces with which users of Chaperone
+interact:
+
+- chaperone-admin-ui (e.g., 'http://chaperone-admin-ui.corp.local')
+- chaperone-ui (e.g., 'http://chaperone-ui.corp.local')
+
+*Note the use of internal domains in the URLs above. This is common where
+developers or users do not have rights to create new domains in their DNS
+servers, and thus make use of locally defined domains. More on that in the
+[setup documentation](docs/setup.md).*
+
+#### Using the Chaperone Admin UI
+
+The admin UI (chaperone-admin-ui) is an interface that allows one to
+select from a list of SDDC features they would like to deploy, and basic
+ambient environment information, such as DNS servers, NTP servers, etc. Once
+entered into the various "Prepare" menu forms, clicking 'Save' saves the
+configuration as a 'codified design.' Basically, that means the information
+is saved in a YAML file as a set of parameters or, more commonly Ansible
+variables.
+
+Once the chaperone-admin-ui "Prepare" menu forms are complete and saved, the
+next step is clicking on the "Install" menu and thereafter "Saving the Configuration."
+That is a button on the "Install" menu that generates the second web interface,
+the chaperone-ui site.
+
+#### Using the Chaperone UI
+The chaperone-ui site is the site used to configure the SDDC installations.
+The process is the same as chaperone-admin-ui, wherein the user fills out the
+"Prepare" forms and saves them. Thereafter, the "Install" menu provides buttons for
+the various tasks that must be done to complete the SDDC install. To perform
+the various installations and configurations, Chaperone generally runs Ansible
+plays as a result of clicking on one of the Install menu buttons. The plays
+configure and deploy the environment, pursuant to the saved "Prepare" values.
