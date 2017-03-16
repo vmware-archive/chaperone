@@ -5,8 +5,7 @@ that said, though, the tools currently taint their view a bit towards a
 VMware setup where a vCenter Server is available. Therefore we have a number
 of examples that might make the tools seem purely VMware, but do not let the
 samples fool -- it is a general purpose tool set as you will see when setting
-up UI forms and getting those to call on various processes (automations, which
-frankly can be just about any Linux command).
+up UI forms and getting those to call on various processes.
 
 With the 'taint' noted above, once one or more of the Chaperone package tools
 has been [deployed](setup.md) to a Chaperone Deployment Server, a vCenter
@@ -42,13 +41,13 @@ If the CDS is deployed within the vCenter Server environment, a SSH port for
 the Chaperone Deployment Server must also be exposed through the router.
 
 ### Running Chaperone
-The Chaperone UI exposes (via a left-hand side menuing system) Prepare and
-Install sections. The Prepare section presents forms that accept configurations
+The Chaperone UI exposes (via a left-hand side menu system) 'Prepare' and
+'Install' sections. The 'Prepare' section presents forms that accept configurations
 to be used in configuring the Data Center. This may be populated manually, or
 or the population can be preloaded by using an answerfile. (This is an advanced
 topic for which documentation is forthcoming).
 
-The Install section exposes scripts that will actually set up the Data Center
+The 'Install' section exposes scripts that will actually set up the Data Center
 using the configurations in the Prepare section.
 
 Some of components install steps are prerequisites for later installs, so the
