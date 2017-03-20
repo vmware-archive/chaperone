@@ -20,7 +20,7 @@
   <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,chaperone" remote="github"/>
-  <project path="ansible/roles/franklinkim.openssl" name="momentumsi/ansible-openssl.git" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/franklinkim.openssl" name="weareinteractive/ansible-openssl" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,chaperone" remote="github"/>
 
 </manifest>
