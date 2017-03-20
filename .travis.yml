@@ -25,13 +25,17 @@ before_install:
   - git config --global user.email "you@example.com"
   - git config --global user.name "Your Name"
   - "[ -d /opt/chaperone ] || sudo mkdir -p /opt/chaperone"
+  # get the username portion from github
+  - export GIT_USER=${TRAVIS_REPO_SLUG%/*}
+  - export CHAPERONE_BRANCH="master"
+  - git ls-remote --exit-code --heads https://github.com/$GIT_USER/chaperone "$TRAVIS_BRANCH" && CHAPERONE_BRANCH=$TRAVIS_BRANCH || true
 
 install:
   - pip install ansible ansible-lint
 
 script:
   - cd /tmp
-  - echo "y" | repo init -u https://github.com/$TRAVIS_REPO_SLUG -b $TRAVIS_BRANCH -g chaperone
+  - echo "y" | repo init -u https://github.com/$GIT_USER/chaperone -b $CHAPERONE_BRANCH -g chaperone
   - repo sync
   - cd ansible/playbooks/ansible
   - ansible-playbook -i inventory ansible.yml
