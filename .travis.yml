@@ -23,7 +23,7 @@ install:
 
 script:
   - cd /tmp
-  - echo "y" | repo init -u https://github.com/$SLUG -b $BRANCH -g chaperone; fi
+  - echo "y" | repo init -u https://github.com/$SLUG -b $BRANCH -g chaperone
   - repo sync
   - cd ansible/playbooks/ansible
   - ansible-playbook -i inventory ansible.yml
