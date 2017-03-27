@@ -10,7 +10,7 @@ SDDC Server environment, so must have access to the environment against which
 it will act. This file describes deployment options for the Chaperone
 Deployment Server (CDS)
 
-##External Deployment
+## External Deployment
 Where firewalls or other security measures would not block access to vCenter
 Server and the general SDDC infrastructure by Chaperone, the Deployment Server
 can exist anywhere on any network that can reach the SDDC infrastructure.
@@ -22,7 +22,7 @@ Workstation. This option would look like the following:
 This configuration requires that the vCenter server management port is exposed
 on an external ip that is accessible by the CDS server.
 
-##Internal Deployment
+## Internal Deployment
 In some cases, such as in cloud 'pods' or on production premises, the
 Chaperone Deployment Server needs to exist within the context of the
 infrastructure management server (e.g., vCenter server). In such cases, the
