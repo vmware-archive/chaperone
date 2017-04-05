@@ -1,12 +1,14 @@
 Chaperone Setup
 ===============
-Development and deployment of Chaperone tools require two VMs based on a
-[Ubuntu Linux 64-bit](http://www.ubuntu.com/download/server) image:
-
+Development and deployment of Chaperone tools require two VMs based on
+[VMware Photon OS](https://vmware.github.io/photon) or
+[Ubuntu Linux 64-bit](http://www.ubuntu.com/download/server):
 
 - **Development Environment (DE)** is the environment where the source code is
   downloaded, modified and built. This could be your laptop. In this document it will
-  be an external ubuntu machine.
+  be an external ubuntu machine. See the
+  [devbox setup](https://github.com/vmware/ansible-playbooks-chaperone/blob/master/devbox)
+  for more automated means of setting up on Photon OS or a Mac.
   
 - **Chaperone Deployment Server (CDS)** is the build target for the development environment.
   All ansible playbooks will run from this machine, so its placement in the network
@@ -27,7 +29,7 @@ Getting Started
 ## Setting up the Chaperone Deployment Server
 
 ### Assumptions
-- The CDS is an Ubuntu Linux 64-bit machine
+- For a CDS server built from an Ubuntu Linux 64-bit machine
 
 ### Add a vmware user
     sudo adduser vmware

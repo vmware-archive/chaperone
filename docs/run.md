@@ -80,7 +80,7 @@ interact:
 *Note the use of internal domains in the URLs above. This is common where
 developers or users do not have rights to create new domains in their DNS
 servers, and thus make use of locally defined domains. More on that in the
-[setup documentation](docs/setup.md).*
+[setup documentation](setup.md).*
 
 #### Using the Chaperone Admin UI
 

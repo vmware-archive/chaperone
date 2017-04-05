@@ -22,9 +22,9 @@ If you wish to contribute code and you have not signed our contributor license a
 For any questions about the CLA process, please refer to our [FAQ](https://cla.vmware.com/faq).
 
 ## Getting the code
-[Instructions to setup](docs/setup.md), install and deploy the Chaperone UI
+[Instructions to setup](setup.md), install and deploy the Chaperone UI
 tools and underlying Ansible plays, Python modules and other required code
-bases are [here](docs/setup.md)
+bases are [here](setup.md)
 
 ## Structure and Standards
 *TODO*
@@ -39,7 +39,7 @@ and you don't have push privileges to the original repository.
 
 #### the steps
 1. Use an existing Chaperone base or run a typical `repo init` as described
-   in the [setup docs](docs/setup.md) to pull original Chaperone sources down
+   in the [setup docs](setup.md) to pull original Chaperone sources down
 1. fork the original role or playbook repository in Github under your own account
 1. add your remote in the source tree (` cd ansible/roles/role-to-fix; git remote add myfork https://github.com/myaccount/myrepo` )
 1. make edits in the role/playbook, commit them
