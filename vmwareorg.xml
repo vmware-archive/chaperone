@@ -101,11 +101,13 @@
   <project path="ansible/roles/chaperone" name="ansible-role-chaperone" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/dnsmasq" name="ansible-role-dnsmasq" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/docker" name="ansible-role-docker" groups="roles,chaperone" remote="vmwareorg"/>
+  <project path="ansible/roles/govc" name="ansible-role-govc" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/iptables" name="ansible-role-iptables" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/kibana" name="ansible-role-kibana" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/kubernetes_master" name="ansible-role-kubernetes-master" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/kubernetes_node" name="ansible-role-kubernetes-node" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/elasticsearch" name="ansible-role-elasticsearch" groups="roles,chaperone" remote="vmwareorg"/>
+  <project path="ansible/roles/liota" name="ansible-role-liota" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/logstash-server" name="ansible-role-logstash-server" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/net" name="ansible-role-net" groups="roles,chaperone" remote="vmwareorg"/>
   <project path="ansible/roles/nfs" name="ansible-role-nfs" groups="roles,chaperone" remote="vmwareorg"/>
