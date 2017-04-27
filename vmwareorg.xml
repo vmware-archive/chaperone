@@ -60,7 +60,6 @@
   <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
-    <copyfile src="does_vm_exist.py" dest="ansible/library/does_vm_exist.py" />
     <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py"/>
     <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
     <copyfile src="configure_vra_sso.py" dest="ansible/library/configure_vra_sso.py"/>
