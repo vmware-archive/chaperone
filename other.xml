@@ -15,6 +15,8 @@
 
   <!-- roles -->
   <project path="ansible/roles/apache" name="tomhite/ansible-role-apache.git" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/andrewrothstein.packer" name="andrewrothstein/ansible-packer" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/andrewrothstein.unarchive-deps" name="andrewrothstein/ansible-unarchive-deps" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/collectd" name="tomhite/ansible-role-collectd" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/consul" name="tomhite/ansible-role-consul" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
