@@ -14,19 +14,18 @@
   </project>
 
   <!-- roles -->
-  <project path="ansible/roles/apache" name="tomhite/ansible-role-apache.git" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/andrewrothstein.packer" name="andrewrothstein/ansible-packer" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/andrewrothstein.unarchive-deps" name="andrewrothstein/ansible-unarchive-deps" groups="roles,chaperone" remote="github"/>
+  <project path="ansible/roles/apache" name="tomhite/ansible-role-apache.git" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/collectd" name="tomhite/ansible-role-collectd" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/consul" name="tomhite/ansible-role-consul" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.htpasswd" name="weareinteractive/ansible-htpasswd.git" groups="roles,chaperone" remote="github"/>
-  <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
-  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
-  <project path="ansible/roles/jdauphant.nginx" name="jdauphant/ansible-role-nginx" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.nginx" name="weareinteractive/ansible-nginx.git" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/franklinkim.openssl" name="weareinteractive/ansible-openssl" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
+  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
+  <project path="ansible/roles/jdauphant.nginx" name="jdauphant/ansible-role-nginx" groups="roles,chaperone" remote="github"/>
   <project path="roles/andrewrothstein.packer" name="andrewrothstein/ansible-packer" groups="chaperone" remote="github"/>
   <project path="roles/andrewrothstein.unarchive-deps" name="andrewrothstein/ansible-unarchive-deps" groups="chaperone" remote="github"/>
   <project path="roles/geerlingguy.java" name="geerlingguy/ansible-role-java" groups="pipeline" remote="github"/>
