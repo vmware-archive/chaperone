@@ -24,7 +24,6 @@
   <project path="ansible/roles/franklinkim.openssl" name="weareinteractive/ansible-openssl" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/graphite-api" name="tomhite/ansible-role-graphite-api" groups="roles,chaperone" remote="github"/>
   <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
-  <project path="ansible/roles/hosts" name="ajsalminen/ansible-role-hosts.git" groups="sdlc,roles,chaperone" remote="github"/>
   <project path="ansible/roles/jdauphant.nginx" name="jdauphant/ansible-role-nginx" groups="roles,chaperone" remote="github"/>
   <project path="roles/andrewrothstein.packer" name="andrewrothstein/ansible-packer" groups="chaperone" remote="github"/>
   <project path="roles/andrewrothstein.unarchive-deps" name="andrewrothstein/ansible-unarchive-deps" groups="chaperone" remote="github"/>
