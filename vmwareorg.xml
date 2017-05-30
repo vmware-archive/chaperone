@@ -22,14 +22,14 @@
   <project path="ansible/modules/extras-gpl3" name="ansible-modules-extras-gpl3" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
-    <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
     <copyfile src="vcenter_cluster.py" dest="ansible/library/vcenter_cluster.py" />
+    <copyfile src="vcenter_datacenter.py" dest="ansible/library/vcenter_datacenter.py" />
     <copyfile src="vcenter_config_host_vds_only.py" dest="ansible/library/vcenter_config_host_vds_only.py" />
     <!--
         TODO: there are two of the next file so need to reconcile:
               the other is at .../modules/chaperone/vcsa
     -->
-    <copyfile src="vcenter_addvmk.py" dest="ansible/library/vcenter_addvmk.py" />
+    <copyfile src="vcenter_vmk.py" dest="ansible/library/vcenter_vmk.py" />
     <copyfile src="vcenter_vmkmigration.py" dest="ansible/library/vcenter_vmkmigration.py" />
     <copyfile src="vcenter_vmmigration.py" dest="ansible/library/vcenter_vmmigration.py" />
     <copyfile src="vio_oms_deploy.py" dest="ansible/library/vio_oms_deploy.py" />
@@ -46,16 +46,34 @@
     <copyfile src="vcenter_rename_vsan_ds.py" dest="ansible/library/vcenter_rename_vsan_ds.py" />
     <copyfile src="vcenter_pg_activeuplinks.py" dest="ansible/library/vcenter_pg_activeuplinks.py" />
     <copyfile src="vcenter_host_profile.py" dest="ansible/library/vcenter_host_profile.py" />
+    <copyfile src="os_create_user.py" dest="ansible/library/os_create_user.py" />
+    <copyfile src="os_create_project.py" dest="ansible/library/os_create_project.py" />
     <copyfile src="nsx_vds_id.py" dest="ansible/library/nsx_vds_id.py" />
+    <copyfile src="os_projects.py" dest="ansible/library/os_projects.py" />
+    <copyfile src="os_user.py" dest="ansible/library/os_user.py" />
+    <copyfile src="vcenter_add_lag_vds.py" dest="ansible/library/vcenter_add_lag_vds.py" />
+    <copyfile src="vcenter_host_vmnic.py" dest="ansible/library/vcenter_host_vmnic.py" />
+    <copyfile src="vcenter_nfs_ds.py" dest="ansible/library/vcenter_nfs_ds.py" />
+    <copyfile src="vcenter_vrops_config.py" dest="ansible/library/vcenter_vrops_config.py" />
+    <copyfile src="vio_provider_network.py" dest="ansible/library/vio_provider_network.py" />
+    <copyfile src="vio_unregister_extension.py" dest="ansible/library/vio_unregister_extension.py" />
+    <copyfile src="vcenter_host_ntp.py" dest="ansible/library/vcenter_host_ntp.py" />
+
   </project>
 
   <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
     <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
+    <copyfile src="does_vm_exist.py" dest="ansible/library/does_vm_exist.py" />
     <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py"/>
     <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
     <copyfile src="configure_vra_sso.py" dest="ansible/library/configure_vra_sso.py"/>
     <copyfile src="configure_vra_appliance_mod.py" dest="ansible/library/configure_vra_appliance_mod.py"/>
+    <copyfile src="vio_cluster_deploy.py" dest="ansible/library/vio_cluster_deploy.py" />
+    <copyfile src="vcenter_vro_config.py" dest="ansible/library/vcenter_vro_config.py" />
+    <copyfile src="os_heat_status.py" dest="ansible/library/os_heat_status.py" />
+    <copyfile src="os_check_heat.py" dest="ansible/library/os_check_heat.py" />
+
   </project>
 
    <!-- nsxansible - the directory structure is for a playbook, we need to modify slightly -->
@@ -73,8 +91,6 @@
     <copyfile src="library/nsx_vc_registration.py" dest="ansible/library/nsx_vc_registration.py" />
     <copyfile src="library/nsx_vxlan_prep.py" dest="ansible/library/nsx_vxlan_prep.py" />
     <copyfile src="library/vcenter_gather_moids.py" dest="ansible/library/vcenter_gather_moids.py" />
-    <copyfile src="roles/base-config-nsx/tasks/main.yml" dest="ansible/roles/nsx/tasks/base-config-nsx.yml" />
-    <copyfile src="roles/deploy-nsx-ova/tasks/main.yml" dest="ansible/roles/nsx/tasks/deploy-nsx-ova.yml" />
   </project>
 
   <project path="ansible/roles/nsx/files" name="nsxraml.git" groups="modules,chaperone" remote="vmwareorg" >
