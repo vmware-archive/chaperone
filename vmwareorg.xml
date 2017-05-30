@@ -25,6 +25,7 @@
     <copyfile src="vcenter_vmk.py" dest="ansible/library/vcenter_vmk.py" />
     <copyfile src="vcenter_cluster.py" dest="ansible/library/vcenter_cluster.py" />
     <copyfile src="vcenter_config_host_vds_only.py" dest="ansible/library/vcenter_config_host_vds_only.py" />
+    <copyfile src="vio_cluster_deploy.py" dest="ansible/library/vio_cluster_deploy.py" />
     <!--
         TODO: there are two of the next file so need to reconcile:
               the other is at .../modules/chaperone/vcsa
@@ -65,7 +66,6 @@
     <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
     <copyfile src="configure_vra_sso.py" dest="ansible/library/configure_vra_sso.py"/>
     <copyfile src="configure_vra_appliance_mod.py" dest="ansible/library/configure_vra_appliance_mod.py"/>
-    <copyfile src="vio_cluster_deploy.py" dest="ansible/library/vio_cluster_deploy.py" />
     <copyfile src="vcenter_vro_config.py" dest="ansible/library/vcenter_vro_config.py" />
     <copyfile src="os_heat_status.py" dest="ansible/library/os_heat_status.py" />
     <copyfile src="os_check_heat.py" dest="ansible/library/os_check_heat.py" />
